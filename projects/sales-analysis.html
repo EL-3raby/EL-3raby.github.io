@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Analysis Dashboard | Ahmed Elaraby</title>
+    <meta
+      name="description"
+      content="Case study: Interactive sales analysis dashboard providing real-time insights for retail businesses"
+    />
+
+    <!-- Styles and scripts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/project-detail.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-logo">
+          <span class="logo-accent">A</span>hmed<span class="logo-accent"
+            >E</span
+          >laraby
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li>
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+          </li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="lang-toggle" id="langToggle">
+            <span class="lang-text">EN</span>
+            <i class="fas fa-globe"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <main class="project-detail">
+      <div class="container">
+        <!-- Back Button -->
+        <a href="../index.html#projects" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+
+        <!-- Project Header -->
+        <header class="project-header">
+          <div class="project-meta">
+            <span class="project-category">Data Analysis & Visualization</span>
+            <span class="project-date">Completed: Dec 2023</span>
+          </div>
+          <h1 class="project-title">Sales Analysis Dashboard</h1>
+          <p class="project-subtitle">
+            Interactive sales analysis system that provides real-time insights,
+            identifies growth opportunities, and helps optimize sales strategies
+            for retail businesses.
+          </p>
+
+          <!-- Project Info Box -->
+          <div class="project-info-box">
+            <div class="info-item">
+              <h4><i class="fas fa-user-tie"></i> Client</h4>
+              <p>Egyptian Retail Chain</p>
+            </div>
+            <div class="info-item">
+              <h4><i class="fas fa-calendar"></i> Timeline</h4>
+              <p>2 Months</p>
+            </div>
+            <div class="info-item">
+              <h4><i class="fas fa-tasks"></i> My Role</h4>
+              <p>Data Analyst & Developer</p>
+            </div>
+            <div class="info-item">
+              <h4><i class="fas fa-code"></i> Technologies</h4>
+              <div class="project-links-detail">
+                <a
+                  href="https://github.com/3raboka/sales-analysis-project"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="#" class="btn btn-secondary" onclick="window.print()">
+                  <i class="fas fa-print"></i> Print Case Study
+                </a>
+              </div>
+              <div class="tech-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Plotly</span>
+                <span>Streamlit</span>
+                <span>SQL</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Project Image -->
+        <div class="project-gallery">
+          <div class="gallery-container">
+            <!-- Gallery Navigation -->
+            <button class="gallery-nav prev-btn" aria-label="Previous image">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <!-- Gallery Images -->
+            <div class="gallery-track">
+              <div class="gallery-slide active">
+                <img
+                  src="../assets/images/download (1).png"
+                  alt="Sales Dashboard - Main Overview"
+                  loading="lazy"
+                />
+                <div class="image-caption">
+                  Dashboard Overview - Main Metrics
+                </div>
+              </div>
+
+              <div class="gallery-slide">
+                <img
+                  src="../assets/images/download.png"
+                  alt="Sales Trends Analysis"
+                  loading="lazy"
+                />
+                <div class="image-caption">Sales Trends & Forecasting</div>
+              </div>
+
+              <div class="gallery-slide">
+                <img
+                  src="../assets/images/download (2).png"
+                  alt="Customer Segmentation"
+                  loading="lazy"
+                />
+                <div class="image-caption">Customer Segmentation Analysis</div>
+              </div>
+
+              <div class="gallery-slide">
+                <img
+                  src="../assets/images/download (3).png"
+                  alt="Regional Performance"
+                  loading="lazy"
+                />
+                <div class="image-caption">Regional Performance Map</div>
+              </div>
+
+              <div class="gallery-slide">
+                <img
+                  src="../assets/images/download (4).png"
+                  alt="Product Analysis"
+                  loading="lazy"
+                />
+                <div class="image-caption">Product Performance Analysis</div>
+              </div>
+            </div>
+
+            <!-- Gallery Navigation -->
+            <button class="gallery-nav next-btn" aria-label="Next image">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Gallery Dots -->
+            <div class="gallery-dots">
+              <button class="dot active" aria-label="Go to slide 1"></button>
+              <button class="dot" aria-label="Go to slide 2"></button>
+              <button class="dot" aria-label="Go to slide 3"></button>
+              <button class="dot" aria-label="Go to slide 4"></button>
+              <button class="dot" aria-label="Go to slide 5"></button>
+            </div>
+
+            <!-- Fullscreen Toggle -->
+            <button class="fullscreen-btn" aria-label="Toggle fullscreen">
+              <i class="fas fa-expand"></i>
+            </button>
+          </div>
+
+          <!-- Gallery Counter -->
+          <div class="gallery-counter">
+            <span class="current-slide">1</span> /
+            <span class="total-slides">5</span>
+          </div>
+        </div>
+
+        <!-- Project Content -->
+        <div class="project-content">
+          <!-- The Challenge -->
+          <section class="content-section">
+            <h2>
+              <i class="fas fa-exclamation-triangle text-accent"></i> The
+              Challenge
+            </h2>
+            <p>A leading retail chain in Egypt was struggling with:</p>
+            <ul>
+              <li>Manual sales reporting taking 3-4 days each month</li>
+              <li>No real-time visibility into sales performance</li>
+              <li>
+                Difficulty identifying underperforming products and regions
+              </li>
+              <li>Inability to track the impact of promotions and discounts</li>
+              <li>
+                Separate data sources (POS, inventory, CRM) causing data
+                inconsistencies
+              </li>
+            </ul>
+            <p>
+              They needed a unified system that could provide instant insights
+              and help make data-driven decisions.
+            </p>
+          </section>
+
+          <!-- The Solution -->
+          <section class="content-section">
+            <h2><i class="fas fa-lightbulb text-accent"></i> The Solution</h2>
+            <p>
+              I developed an end-to-end sales analysis system with an
+              interactive dashboard:
+            </p>
+
+            <h3>Data Pipeline & Integration</h3>
+            <ul>
+              <li>
+                Built ETL pipelines to consolidate data from 5 different sources
+              </li>
+              <li>
+                Created a centralized PostgreSQL database with daily automated
+                updates
+              </li>
+              <li>Implemented data validation and cleaning processes</li>
+              <li>
+                Set up incremental data loading to handle 500K+ daily
+                transactions
+              </li>
+            </ul>
+
+            <h3>Analysis & Metrics</h3>
+            <ul>
+              <li>Developed 20+ key performance indicators (KPIs)</li>
+              <li>
+                Created customer segmentation analysis using RFM methodology
+              </li>
+              <li>Built sales forecasting models for inventory optimization</li>
+              <li>Implemented anomaly detection for unusual sales patterns</li>
+            </ul>
+
+            <h3>Dashboard Development</h3>
+            <ul>
+              <li>Built interactive dashboard using Streamlit and Plotly</li>
+              <li>
+                Created multiple views: Executive Summary, Product Analysis,
+                Regional Performance, Customer Insights
+              </li>
+              <li>Added drill-down capabilities for detailed analysis</li>
+              <li>Implemented scheduled email reports for stakeholders</li>
+            </ul>
+
+            <div class="code-snippet">
+              <div class="code-header">
+                <span>Python</span>
+                <button class="copy-btn">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+              <pre><code># Example: Sales trend analysis
+def analyze_sales_trends(data, period='monthly'):
+    if period == 'monthly':
+        trends = data.groupby(pd.Grouper(key='date', freq='M')).agg({
+            'sales': 'sum',
+            'transactions': 'count',
+            'customers': pd.Series.nunique
+        })
+    # Calculate month-over-month growth
+    trends['growth_rate'] = trends['sales'].pct_change() * 100
+    return trends
+
+# Example: Customer segmentation using RFM
+def calculate_rfm_scores(customers_data):
+    # Recency: Days since last purchase
+    customers_data['recency'] = (pd.Timestamp.now() - customers_data['last_purchase']).dt.days
+    
+    # Frequency: Number of purchases
+    frequency = customers_data.groupby('customer_id').size()
+    
+    # Monetary: Total spending
+    monetary = customers_data.groupby('customer_id')['amount'].sum()
+    
+    # Combine scores
+    rfm_scores = pd.DataFrame({
+        'recency': customers_data['recency'],
+        'frequency': frequency,
+        'monetary': monetary
+    })
+    
+    return rfm_scores</code></pre>
+            </div>
+          </section>
+
+          <!-- Key Features -->
+          <section class="content-section">
+            <h2><i class="fas fa-star text-accent"></i> Key Features</h2>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h4>Real-time Updates</h4>
+                <p>Dashboard updates every 15 minutes with latest sales data</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-filter"></i>
+                </div>
+                <h4>Interactive Filters</h4>
+                <p>Filter by date range, region, product category, and store</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Advanced Visualizations</h4>
+                <p>
+                  Interactive charts with zoom, pan, and drill-down capabilities
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-bell"></i>
+                </div>
+                <h4>Alert System</h4>
+                <p>
+                  Automatic alerts for sales anomalies and target achievements
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- The Results -->
+          <section class="content-section">
+            <h2><i class="fas fa-chart-bar text-accent"></i> The Results</h2>
+            <div class="results-grid">
+              <div class="result-card">
+                <div class="result-number">90%</div>
+                <div class="result-label">Faster Reporting</div>
+              </div>
+              <div class="result-card">
+                <div class="result-number">25%</div>
+                <div class="result-label">Increase in Sales</div>
+              </div>
+              <div class="result-card">
+                <div class="result-number">15%</div>
+                <div class="result-label">Cost Reduction</div>
+              </div>
+              <div class="result-card">
+                <div class="result-number">40+</div>
+                <div class="result-label">Users Adopted</div>
+              </div>
+            </div>
+
+            <h3>Business Impact</h3>
+            <ul>
+              <li>
+                <strong>Reporting time reduced</strong> from 4 days to 4 hours
+                monthly
+              </li>
+              <li>
+                <strong>Identified 3 underperforming regions</strong> leading to
+                strategy adjustments
+              </li>
+              <li>
+                <strong>Optimized inventory levels</strong>, reducing stockouts
+                by 30%
+              </li>
+              <li>
+                <strong>Improved promotional effectiveness</strong> through A/B
+                testing insights
+              </li>
+              <li>
+                <strong>Enabled data-driven decisions</strong> at all management
+                levels
+              </li>
+            </ul>
+
+            <h3>Technical Achievements</h3>
+            <ul>
+              <li>Processes 500K+ transactions daily with 99.9% uptime</li>
+              <li>
+                Dashboard loads in under 3 seconds even with large datasets
+              </li>
+              <li>
+                Automated data pipeline reduces manual work by 20 hours/week
+              </li>
+              <li>
+                Modular architecture allows easy addition of new data sources
+              </li>
+            </ul>
+          </section>
+
+          <!-- Lessons Learned -->
+          <section class="content-section">
+            <h2>
+              <i class="fas fa-graduation-cap text-accent"></i> Lessons Learned
+            </h2>
+            <ul>
+              <li>
+                <strong>User involvement is crucial:</strong> Regular feedback
+                sessions with end-users helped shape the most useful features
+              </li>
+              <li>
+                <strong>Start simple, then expand:</strong> Initially focused on
+                5 key metrics, then gradually added more complex analyses
+              </li>
+              <li>
+                <strong>Performance matters:</strong> Optimized database queries
+                and implemented caching for better dashboard performance
+              </li>
+              <li>
+                <strong>Training is essential:</strong> Created video tutorials
+                and documentation to ensure successful adoption
+              </li>
+            </ul>
+          </section>
+
+          <!-- Future Enhancements -->
+          <section class="content-section">
+            <h2>
+              <i class="fas fa-rocket text-accent"></i> Future Enhancements
+            </h2>
+            <ul>
+              <li>
+                Integration with machine learning for predictive analytics
+              </li>
+              <li>Mobile app version for on-the-go access</li>
+              <li>
+                Natural language query interface (Ask questions in plain
+                English/Arabic)
+              </li>
+              <li>Integration with weather data for weather-impact analysis</li>
+              <li>Advanced customer lifetime value prediction</li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Project Navigation -->
+        
+          </a>
+          <a href="../index.html#projects" class="nav-btn all-projects">
+            <i class="fas fa-th"></i>
+            All Projects
+          </a>
+          <a href="social_games_rate.html" class="nav-btn next-btn">
+            <div>
+              <span>Next Project</span>
+              <h4>Social Games Rate</h4>
+            </div>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="currentYear">2024</span> Ahmed Elaraby. All rights
+          reserved.
+        </p>
+        <div class="footer-social">
+          <a href="https://github.com/3raboka" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ahmed-el-3raby/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../js/project-detail.js"></script>
+  </body>
+</html>

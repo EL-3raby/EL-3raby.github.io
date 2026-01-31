@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmed Elaraby - Machine Learning Engineer | Egypt</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Ahmed Elaraby - Machine Learning Engineer from Egypt. Building intelligent AI solutions with Python, TensorFlow, and ML expertise for businesses worldwide."
+    />
+    <meta
+      name="keywords"
+      content="machine learning engineer, AI developer, python, tensorflow, deep learning, Egypt, Cairo, freelancer, data scientist"
+    />
+    <meta name="author" content="Ahmed Elaraby" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://el-3raby.github.io/" />
+    <meta
+      property="og:title"
+      content="Ahmed Elaraby - Machine Learning Engineer | Egypt"
+    />
+    <meta
+      property="og:description"
+      content="ML Engineer building intelligent AI solutions for businesses in Egypt and worldwide."
+    />
+    <meta
+      property="og:image"
+      content="https://el-3raby.github.io/assets/images/og-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://el-3raby.github.io/" />
+    <meta
+      property="twitter:title"
+      content="Ahmed Elaraby - Machine Learning Engineer | Egypt"
+    />
+    <meta
+      property="twitter:description"
+      content="ML Engineer building intelligent AI solutions for businesses in Egypt and worldwide."
+    />
+    <meta
+      property="twitter:image"
+      content="https://el-3raby.github.io/assets/images/og-image.jpg"
+    />
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2eaadc" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" />
+
+    <!-- Preload & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmed Elaraby",
+        "jobTitle": "Machine Learning Engineer",
+        "url": "https://ahmedelaraby.github.io",
+        "image": "https://el-3raby.github.io/assets/images/profile.jpg",
+        "email": "mailto:contact@ahmedelaraby.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cairo",
+          "addressRegion": "Cairo",
+          "addressCountry": "Egypt"
+        },
+        "sameAs": [
+          "https://github.com/ahmedelaraby",
+          "https://linkedin.com/in/ahmedelaraby",
+          "https://twitter.com/ahmedelaraby"
+        ],
+        "knowsAbout": [
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Python Programming",
+          "TensorFlow",
+          "Deep Learning",
+          "Data Science"
+        ],
+        "description": "Machine Learning Engineer specializing in building AI solutions for businesses in Egypt and worldwide."
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="#home" class="nav-logo" aria-label="Home - Ahmed Elaraby">
+          <span class="logo-accent">A</span>hmed<span class="logo-accent"
+            >E</span
+          >laraby
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none">
+            <a href="#home" class="nav-link" role="menuitem">Home</a>
+          </li>
+          <li role="none">
+            <a href="#about" class="nav-link" role="menuitem">About</a>
+          </li>
+          <li role="none">
+            <a href="#projects" class="nav-link" role="menuitem">Projects</a>
+          </li>
+          <li role="none">
+            <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+          </li>
+          <li role="none">
+            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Language Toggle & Mobile Menu -->
+        <div class="nav-actions">
+          <!-- Language Toggle -->
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            aria-label="Toggle language between English and Arabic"
+          >
+            <span class="lang-text">EN</span>
+            <i class="fas fa-globe" aria-hidden="true"></i>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Online Status Indicator -->
+    <div id="onlineStatus" class="online-status" aria-live="polite"></div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero" aria-label="Introduction">
+        <div class="hero-container">
+          <!-- Text Content -->
+          <div class="hero-text">
+            <p class="hero-greeting">
+              <i class="fas fa-hand-wave" aria-hidden="true"></i> Hello World!
+            </p>
+            <h1 class="hero-title">
+              I'm <span class="text-accent">Ahmed Elaraby</span>
+            </h1>
+            <div class="hero-subtitle">
+              <span class="typing-text" aria-live="polite"
+                >Machine Learning Engineer</span
+              >
+              <span class="typing-cursor" aria-hidden="true">|</span>
+            </div>
+            <p class="hero-description">
+              I build intelligent solutions that solve real-world problems.
+              Based in <span class="text-accent">Egypt</span>, working with
+              clients worldwide.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fas fa-code" aria-hidden="true"></i> View My Work
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Get In
+                Touch
+              </a>
+            </div>
+          </div>
+
+          <!-- Image Placeholder -->
+          <div class="hero-image">
+            <div class="hero-image">
+              <img
+                src="assets/images/profile.png"
+                alt="Ahmed Elaraby, Machine Learning Engineer"
+                class="profile-photo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about" aria-label="About Me">
+        <div class="container about-container">
+          <!-- Image -->
+          <div class="about-image">
+            <img
+              src="assets/images/aa.png"
+              alt="Ahmed Elaraby - Professional Photo"
+              class="profile-photo about-profile"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-text">
+              <p class="about-intro">
+                I'm a passionate
+                <span class="text-accent">Machine Learning Engineer</span> based
+                in Cairo, Egypt. I specialize in turning complex data into
+                actionable insights and building intelligent systems that scale.
+                My work sits at the intersection of robust software engineering
+                and cutting-edge AI research.
+              </p>
+
+              <div class="about-details">
+                <div class="about-item">
+                  <h3>
+                    <i
+                      class="fas fa-bullseye text-accent"
+                      aria-hidden="true"
+                    ></i>
+                    My Approach
+                  </h3>
+                  <ul>
+                    <li>
+                      <strong>Problem-First Mindset</strong>
+                      <p>
+                        I start by deeply understanding the business challenge
+                        before writing a single line of code.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Production-Ready Solutions</strong>
+                      <p>
+                        I build models that don't just work in a notebook, but
+                        are deployed, monitored, and maintained in real-world
+                        environments.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Clear Communication</strong>
+                      <p>
+                        I bridge the gap between technical and non-technical
+                        stakeholders, ensuring everyone is aligned throughout
+                        the project.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="about-item">
+                  <h3>
+                    <i class="fas fa-star text-accent" aria-hidden="true"></i>
+                    Why Work With Me?
+                  </h3>
+                  <ul>
+                    <li>
+                      <strong>Local Understanding, Global Standards</strong>
+                      <p>
+                        I understand the specific market needs and challenges in
+                        Egypt and the MENA region, while delivering solutions
+                        that meet international technical standards.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>End-to-End Ownership</strong>
+                      <p>
+                        From concept to deployment, I handle the entire project
+                        lifecycle.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Flexible & Responsive</strong>
+                      <p>
+                        As a freelancer, I provide dedicated attention and
+                        adaptable workflows to fit your timeline.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="about-hobbies">
+                <h4>
+                  <i class="fas fa-coffee text-accent" aria-hidden="true"></i>
+                  Beyond the Code
+                </h4>
+                <p>
+                  When I'm not training models, you can find me exploring new
+                  tech blogs, contributing to open-source projects, or enjoying
+                  a cup of Egyptian tea.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section projects" aria-label="My Projects">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">
+              A selection of my recent work on machine learning and AI
+            </p>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div
+            class="filter-container"
+            role="tablist"
+            aria-label="Filter projects by technology"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="python"
+              role="tab"
+              aria-selected="false"
+            >
+              Python
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="tensorflow"
+              role="tab"
+              aria-selected="false"
+            >
+              TensorFlow
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="cv"
+              role="tab"
+              aria-selected="false"
+            >
+              Computer Vision
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="nlp"
+              role="tab"
+              aria-selected="false"
+            >
+              NLP
+            </button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid">
+            <!-- تحديث جميع بطاقات المشاريع في قسم Projects -->
+
+            <!-- Project 1: Sales Analysis Dashboard -->
+            <div class="project-card" data-category="python data-analysis">
+              <div class="project-image">
+                <div class="image-wrapper">
+                    <img src="assets/images/dataset-cover.jpg" alt="Sales Analysis Dashboard Project Screenshot" class="project-thumbnail" />
+                  <div class="tech-badge">DA</div>
+                </div>
+                <div class="project-overlay">
+                  <a href="projects/sales-analysis.html" class="view-project">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Case Study
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Sales Analysis Dashboard</h3>
+                <p class="project-description">
+                  Comprehensive sales analysis system with interactive dashboard
+                  that provides real-time insights and identifies growth
+                  opportunities for retail businesses.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">Plotly</span>
+                  <span class="tech-tag">Streamlit</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-links">
+                  <a href="projects/sales-analysis.html" class="project-link">
+                    <i class="fas fa-book-open"></i> Case Study
+                  </a>
+                  <a
+                    href="https://github.com/3raboka/sales-analysis-project"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a
+                    href="https://sales-analysis-demo.vercel.app"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: social_games_rate -->
+            <div class="project-card" data-category="python cv tensorflow">
+              <div class="project-image">
+                <div class="image-wrapper">
+                    <img src="assets/images/game.png" alt="Social Games Rate Project Screenshot" class="project-thumbnail" />
+                  <div class="tech-badge">CV</div>
+                </div>
+                <div class="project-overlay">
+                  <a
+                    href="projects/social_games_rate.html"
+                    class="view-project"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    View Details
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Social Games Rate</h3>
+                <p class="project-description">
+                  Built a Machine Learning model to analyze and predict video game sales using historical data.
+                   Performed data cleaning, exploratory analysis, and feature engineering to identify key factors affecting sales and improve forecasting accuracy.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="projects/social_games_rate.html"
+                    class="project-link"
+                  >
+                    <i class="fas fa-book-open"></i> Case Study
+                  </a>
+                  <a
+                    href="https://github.com/ahmedelaraby/medical-image-analysis"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a
+                    href="https://arxiv.org/abs/example"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fas fa-file-pdf"></i> Paper
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Arabic Sentiment Analysis -->
+            <div class="project-card" data-category="python nlp">
+              <div class="project-image">
+                <div class="image-wrapper">
+                  <div class="tech-badge">NLP</div>
+                </div>
+                <div class="project-overlay">
+                  <a
+                    href="projects/arabic-sentiment-analysis.html"
+                    class="view-project"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    View Details
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Arabic Sentiment Analysis</h3>
+                <p class="project-description">
+                  NLP model for analyzing sentiment in Arabic social media text,
+                  achieving 92% accuracy across multiple Arabic dialects.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Transformers</span>
+                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">Docker</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="projects/arabic-sentiment-analysis.html"
+                    class="project-link"
+                  >
+                    <i class="fas fa-book-open"></i> Case Study
+                  </a>
+                  <a
+                    href="https://github.com/ahmedelaraby/arabic-sentiment-analysis"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a
+                    href="https://huggingface.co/ahmedelaraby/arabic-sentiment-model"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fas fa-robot"></i> Model
+                  </a>
+                </div>
+              </div>
+            </div>
+
+           
+            <!-- More Projects -->
+            
+
+          <!-- View More Button -->
+          <div class="text-center">
+            <a href="#projects" class="btn btn-secondary">
+              <i class="fas fa-folder-open" aria-hidden="true"></i> View All
+              Projects
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section skills" aria-label="My Skills">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+          </div>
+
+          <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="skills-category">
+              <h3 class="category-title">
+                <i class="fas fa-code text-accent" aria-hidden="true"></i>
+                Machine Learning & AI
+              </h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percent">95%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div
+                      class="skill-progress"
+                      data-width="95"
+                      style="width: 0%"
+                      role="progressbar"
+                      aria-valuenow="95"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">TensorFlow / Keras</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div
+                      class="skill-progress"
+                      data-width="90"
+                      style="width: 0%"
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">PyTorch</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div
+                      class="skill-progress"
+                      data-width="85"
+                      style="width: 0%"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Scikit-learn</span>
+                    <span class="skill-percent">95%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div
+                      class="skill-progress"
+                      data-width="95"
+                      style="width: 0%"
+                      role="progressbar"
+                      aria-valuenow="95"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Data Engineering -->
+            <div class="skills-category">
+              <h3 class="category-title">
+                <i class="fas fa-server text-accent" aria-hidden="true"></i>
+                Data Engineering & Deployment
+              </h3>
+              <div class="skills-tags">
+                <span class="skill-tag">SQL & Databases</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git & CI/CD</span>
+                <span class="skill-tag">Google Cloud Platform</span>
+                <span class="skill-tag">FastAPI / Flask</span>
+                <span class="skill-tag">Linux / Bash</span>
+              </div>
+            </div>
+
+            <!-- Professional Skills -->
+            <div class="skills-category">
+              <h3 class="category-title">
+                <i class="fas fa-user-tie text-accent" aria-hidden="true"></i>
+                Professional Skills
+              </h3>
+              <div class="professional-skills">
+                <div class="pro-skill">
+                  <div class="pro-icon">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                  </div>
+                  <div class="pro-content">
+                    <h4>Client Communication</h4>
+                    <p>Bridging technical and business perspectives</p>
+                  </div>
+                </div>
+
+                <div class="pro-skill">
+                  <div class="pro-icon">
+                    <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                  </div>
+                  <div class="pro-content">
+                    <h4>Problem Solving</h4>
+                    <p>Analytical approach to complex challenges</p>
+                  </div>
+                </div>
+
+                <div class="pro-skill">
+                  <div class="pro-icon">
+                    <i class="fas fa-tasks" aria-hidden="true"></i>
+                  </div>
+                  <div class="pro-content">
+                    <h4>Project Management</h4>
+                    <p>End-to-end project delivery</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section contact" aria-label="Contact Me">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">
+              Have a project in mind? Interested in collaborating? Feel free to
+              reach out.
+            </p>
+          </div>
+
+          <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+              <div class="info-card">
+                <h3 class="info-title">
+                  <i class="fas fa-envelope text-accent" aria-hidden="true"></i>
+                  Get In Touch
+                </h3>
+                <p class="info-description">
+                  I'm currently available for freelance projects and full-time
+                  opportunities. Whether you have a question or just want to say
+                  hi, I'll get back to you within 24 hours.
+                </p>
+
+                <div class="contact-details">
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-content">
+                      <h4>Email</h4>
+                      <a
+                        href="mailto:contact@ahmedelaraby.com"
+                        class="contact-link"
+                        >contact@ahmedelaraby.com</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-content">
+                      <h4>Location</h4>
+                      <p>Cairo, Egypt</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-clock" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-content">
+                      <h4>Response Time</h4>
+                      <p>Within 24 hours</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="social-links">
+                  <h4>Connect with me</h4>
+                  <div class="social-icons">
+                    <a
+                      href="https://github.com/3raboka"
+                      target="_blank"
+                      class="social-icon"
+                      aria-label="GitHub profile"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/ahmed-el-3raby/"
+                      target="_blank"
+                      class="social-icon"
+                      aria-label="LinkedIn profile"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    
+                     <!-- Mostaql (مستقل) -->
+        <a
+            href="https://mostaql.com/u/ahmed_El3rabyy"
+            target="_blank"
+            class="social-icon mostaql-custom"
+            aria-label="Mostaql profile"
+            rel="noopener noreferrer"
+            title="مستقل"
+        >
+            <span class="icon-text">مستقل</span>
+        </a>
+        
+        <!-- Khamsat (خمسات) -->
+        <a
+            href="https://khamsat.com/user/ahmed_el3raby"
+            target="_blank"
+            class="social-icon khamsat-custom"
+            aria-label="Khamsat profile"
+            rel="noopener noreferrer"
+            title="خمسات"
+        >
+            <span class="icon-text">٥</span>
+        </a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+              <form
+                id="contactForm"
+                action="https://formspree.io/f/maqjvraa"
+                method="POST"
+                novalidate
+              >
+                <div class="form-group">
+                  <label for="name">
+                    <i class="fas fa-user" aria-hidden="true"></i> Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                    aria-required="true"
+                  />
+                  <div class="error-message" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> Email
+                    Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    aria-required="true"
+                  />
+                  <div class="error-message" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">
+                    <i class="fas fa-tag" aria-hidden="true"></i> Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Project inquiry, collaboration, etc."
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">
+                    <i class="fas fa-comment" aria-hidden="true"></i> Your
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Tell me about your project or inquiry..."
+                    required
+                    aria-required="true"
+                  ></textarea>
+                  <div class="error-message" aria-live="polite"></div>
+                </div>
+
+                <div class="form-footer">
+                  <button type="submit" class="btn btn-primary submit-btn">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i> Send
+                    Message
+                  </button>
+                  <p class="form-note">* Required fields</p>
+                </div>
+
+                <div
+                  id="formSuccess"
+                  class="success-message"
+                  style="display: none"
+                  role="alert"
+                  aria-live="polite"
+                >
+                  <i class="fas fa-check-circle" aria-hidden="true"></i>
+                  <h3>Message Sent Successfully!</h3>
+                  <p>
+                    Thank you for your message. I'll get back to you within 24
+                    hours.
+                  </p>
+                </div>
+
+                <div
+                  id="formError"
+                  class="error-message"
+                  style="display: none"
+                  role="alert"
+                  aria-live="polite"
+                >
+                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  <h3>Something went wrong!</h3>
+                  <p>
+                    Please try again later or contact me directly via email.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p>
+          &copy; <span id="currentYear">2024</span> Ahmed Elaraby. All rights
+          reserved.
+        </p>
+        <div class="footer-social">
+          <a href="#home" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Formspree fallback -->
+    <script>
+      // Fallback for Formspree if JavaScript fails
+      window.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+        if (form) {
+          form.setAttribute("action", "https://formspree.io/f/your-form-id");
+        }
+      });
+    </script>
+  </body>
+</html>
