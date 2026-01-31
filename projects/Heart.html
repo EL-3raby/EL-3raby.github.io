@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Games Rate Analysis | Ahmed Elaraby</title>
+    <title>Heart Disease Analysis | Ahmed Elaraby</title>
     <meta
       name="description"
-      content="Case study: Interactive sales analysis dashboard providing real-time insights for retail businesses"
+      content="Case study: Heart Disease Analysis using Machine Learning techniques in Python."
     />
 
     <!-- Styles and scripts -->
@@ -60,20 +60,18 @@
         <header class="project-header">
           <div class="project-meta">
             <span class="project-category">Data Analysis & Visualization</span>
-            <span class="project-date">Completed: Dec 2023</span>
+            <span class="project-date">Completed: Dec 2025</span>
           </div>
-          <h1 class="project-title">Social Games Rate Analysis</h1>
+          <h1 class="project-title">Heart Disease Analysis</h1>
           <p class="project-subtitle">
-            Developed an interactive dashboard to analyze and visualize sales
-            data for a major retail chain, enabling real-time insights and
-            data-driven decision making.
+            Developed an interactive dashboard to analyze and visualize heart disease data using machine learning techniques in Python.
           </p>
 
           <!-- Project Info Box -->
           <div class="project-info-box">
             <div class="info-item">
               <h4><i class="fas fa-user-tie"></i> Client</h4>
-              <p>Egyptian Retail Chain</p>
+              <p>Egyptian Healthcare Organization</p>
             </div>
             <div class="info-item">
               <h4><i class="fas fa-calendar"></i> Timeline</h4>
@@ -87,7 +85,7 @@
               <h4><i class="fas fa-code"></i> Technologies</h4>
               <div class="project-links-detail">
                 <a
-                  href="https://github.com/EL-3raby/sales-analysis-project"
+                  href="#"
                   class="btn btn-primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -195,22 +193,23 @@
               <i class="fas fa-exclamation-triangle text-accent"></i> The
               Challenge
             </h2>
-            <p>A leading retail chain in Egypt was struggling with:</p>
+            <p>A leading healthcare organization in Egypt was struggling with:</p>
             <ul>
-              <li>Manual sales reporting taking 3-4 days each month</li>
-              <li>No real-time visibility into sales performance</li>
+              <li>Slow data processing and analysis</li>
+              <li>No real-time visibility into patient health metrics</li>
               <li>
-                Difficulty identifying underperforming products and regions
+                Difficulty identifying high-risk patients and early warning signs
               </li>
-              <li>Inability to track the impact of promotions and discounts</li>
+              <li>Inability to track the impact of treatment plans</li>
               <li>
                 Separate data sources (POS, inventory, CRM) causing data
                 inconsistencies
               </li>
             </ul>
             <p>
-              They needed a unified system that could provide instant insights
-              and help make data-driven decisions.
+                They needed a comprehensive solution to integrate their data,
+                automate analysis, and provide actionable insights through an
+                interactive dashboard.
             </p>
           </section>
 
@@ -218,18 +217,19 @@
           <section class="content-section">
             <h2><i class="fas fa-lightbulb text-accent"></i> The Solution</h2>
             <p>
-              I developed an end-to-end sales analysis system with an
-              interactive dashboard:
+                Developed a robust data pipeline and an interactive dashboard to
+                provide real-time insights into heart disease data, enabling
+                proactive patient management and data-driven decision making.
             </p>
 
             <h3>Data Pipeline & Integration</h3>
             <ul>
               <li>
-                Built ETL pipelines to consolidate data from 5 different sources
+                Built ETL processes using Python and Pandas to extract data from
+                multiple sources
               </li>
               <li>
-                Created a centralized PostgreSQL database with daily automated
-                updates
+                Designed a PostgreSQL database schema optimized for analysis
               </li>
               <li>Implemented data validation and cleaning processes</li>
               <li>
@@ -240,9 +240,9 @@
 
             <h3>Analysis & Metrics</h3>
             <ul>
-              <li>Developed 20+ key performance indicators (KPIs)</li>
+              <li>Analyzed sales trends using time series analysis</li>
               <li>
-                Created customer segmentation analysis using RFM methodology
+                Developed customer segmentation using RFM analysis
               </li>
               <li>Built sales forecasting models for inventory optimization</li>
               <li>Implemented anomaly detection for unusual sales patterns</li>
@@ -267,36 +267,19 @@
                 </button>
               </div>
               <pre><code># Example: Sales trend analysis
-def analyze_sales_trends(data, period='monthly'):
-    if period == 'monthly':
-        trends = data.groupby(pd.Grouper(key='date', freq='M')).agg({
-            'sales': 'sum',
-            'transactions': 'count',
-            'customers': pd.Series.nunique
-        })
-    # Calculate month-over-month growth
-    trends['growth_rate'] = trends['sales'].pct_change() * 100
-    return trends
-
-# Example: Customer segmentation using RFM
-def calculate_rfm_scores(customers_data):
-    # Recency: Days since last purchase
-    customers_data['recency'] = (pd.Timestamp.now() - customers_data['last_purchase']).dt.days
-    
-    # Frequency: Number of purchases
-    frequency = customers_data.groupby('customer_id').size()
-    
-    # Monetary: Total spending
-    monetary = customers_data.groupby('customer_id')['amount'].sum()
-    
-    # Combine scores
-    rfm_scores = pd.DataFrame({
-        'recency': customers_data['recency'],
-        'frequency': frequency,
-        'monetary': monetary
-    })
-    
-    return rfm_scores</code></pre>
+import pandas as pd
+import numpy as np
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
+# Load sales data
+sales_data = pd.read_csv('sales_data.csv', parse_dates=['date'], index_col='date')
+# Resample to monthly sales
+monthly_sales = sales_data.resample('M').sum()
+# Fit Holt-Winters model
+model = ExponentialSmoothing(monthly_sales, trend='add', seasonal='add', seasonal_periods=12).fit()
+# Forecast next 6 months
+forecast = model.forecast(6)
+print(forecast)
+              </code></pre>
             </div>
           </section>
 
@@ -450,7 +433,7 @@ def calculate_rfm_scores(customers_data):
 
         <!-- Project Navigation -->
         <div class="project-navigation">
-          <a href="sales-analysis.html" class="nav-btn prev-btn disabled">
+          <a href="social_games_rate.html" class="nav-btn prev-btn disabled">
             <i class="fas fa-arrow-left"></i>
             <div>
               <span>Previous Project</span>
@@ -461,11 +444,10 @@ def calculate_rfm_scores(customers_data):
             <i class="fas fa-th"></i>
             All Projects
           </a>
-          <a href="Heart.html" class="nav-btn next-btn">
+          <a href="#next-project" class="nav-btn next-btn">
             <div>
               <span>Next Project</span>
-              <h4>Heart Failure Prediction Dataset
-</h4>
+              <h4></h4>
             </div>
             <i class="fas fa-arrow-right"></i>
           </a>
