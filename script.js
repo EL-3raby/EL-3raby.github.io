@@ -16,20 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
+      const isActive = navMenu.classList.toggle("active");
       hamburger.classList.toggle("active");
-
-      // Animate hamburger to X
-      const bars = hamburger.querySelectorAll(".bar");
-      if (hamburger.classList.contains("active")) {
-        bars[0].style.transform = "rotate(45deg) translate(5px, 5px)";
-        bars[1].style.opacity = "0";
-        bars[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
-      } else {
-        bars[0].style.transform = "none";
-        bars[1].style.opacity = "1";
-        bars[2].style.transform = "none";
-      }
+      hamburger.setAttribute("aria-expanded", isActive);
     });
   }
 
@@ -40,11 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (navMenu && hamburger) {
         navMenu.classList.remove("active");
         hamburger.classList.remove("active");
-
-        const bars = hamburger.querySelectorAll(".bar");
-        bars[0].style.transform = "none";
-        bars[1].style.opacity = "1";
-        bars[2].style.transform = "none";
+        hamburger.setAttribute("aria-expanded", "false");
       }
     });
   });
@@ -214,11 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (navMenu && navMenu.classList.contains("active")) {
           navMenu.classList.remove("active");
           hamburger.classList.remove("active");
-
-          const bars = hamburger.querySelectorAll(".bar");
-          bars[0].style.transform = "none";
-          bars[1].style.opacity = "1";
-          bars[2].style.transform = "none";
+          hamburger.setAttribute("aria-expanded", "false");
         }
       }
     });
