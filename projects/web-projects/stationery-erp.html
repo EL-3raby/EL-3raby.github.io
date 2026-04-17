@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationery System | Project Detail</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/hub.css">
+    <style>
+        .project-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&q=80&w=1470');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .tech-feature-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            padding: 40px;
+            border-radius: 25px;
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .tech-feature-card:hover {
+            border-color: var(--fs-accent);
+            background: rgba(var(--fs-accent-rgb), 0.03);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="fullstack">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <a href="../../index.html" class="logo">A.ELARABY</a>
+        <div class="magnetic-wrap" style="padding: 0;">
+            <a href="../../fullstack.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to
+                Hub</a>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="section reveal reveal-up">
+            <p class="mono accent-text">Enterprise_Infrastructure • Desktop_SaaS</p>
+            <h1 class="hub-title" style="font-size: 4rem;">STATIONERY SYSTEM</h1>
+            <p class="mono" style="margin-top: 20px; opacity: 0.7;">Modern Stationery Management with Hybrid Cloud
+                Synchronization</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 80px;">
+            <div class="reveal reveal-up">
+                <h2 class="mono">Systems_Architecture</h2>
+                <p style="margin: 20px 0; color: var(--text-dim); line-height: 1.8; font-size: 1.1rem;">
+                    Developed a robust ERP solution tailored for high-volume retail environments. The system leverages a hybrid architecture, combining the performance of a native Windows application with the scalability of a cloud-synchronized database.
+                </p>
+                
+                <div style="display: grid; grid-gap: 30px; margin-top: 50px;">
+                    <div class="tech-feature-card">
+                        <h4 class="mono accent-text">Hybrid_Data_Engine</h4>
+                        <p style="color: var(--text-dim); margin-top: 15px;">Real-time background synchronization using Python threads, ensuring zero UI blocking during cloud operations while maintaining a local SQLite fail-safe registry.</p>
+                        <div class="gallery-item" style="margin-top: 25px; border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                            <img src="../../img/projects/stationery/dashboard.png" alt="Dashboard" style="width: 100%; display: block;">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-feature-card">
+                        <h4 class="mono accent-text">Inventory & Sales Intelligence</h4>
+                        <p style="color: var(--text-dim); margin-top: 15px;">Comprehensive modules for inventory tracking and sales reporting, featuring automated PDF generation and audit logging.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 25px;">
+                            <div class="gallery-item" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                                <img src="../../img/projects/stationery/products.png" alt="Products Management" style="width: 100%; display: block;">
+                            </div>
+                            <div class="gallery-item" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                                <img src="../../img/projects/stationery/sales.png" alt="Sales Tracking" style="width: 100%; display: block;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-feature-card">
+                        <h4 class="mono accent-text">Security & Access Control</h4>
+                        <p style="color: var(--text-dim); margin-top: 15px;">Secure authentication system with role-based access control and professional license validation.</p>
+                        <div class="gallery-item" style="margin-top: 25px; border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); max-width: 400px; margin-inline: auto;">
+                            <img src="../../img/projects/stationery/login.png" alt="Login Shield" style="width: 100%; display: block;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="reveal reveal-up" style="transition-delay: 200ms;">
+                <div class="glass" style="padding: 40px; border-radius: 30px; position: sticky; top: 120px;">
+                    <h4 class="mono">Software_Stack</h4>
+                    <div class="card-tags" style="margin-top: 25px; flex-wrap: wrap;">
+                        <span class="tag">Python 3.12</span>
+                        <span class="tag">PySide6 (Qt)</span>
+                        <span class="tag">SQLite3</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Multi-threading</span>
+                    </div>
+
+                    <h4 class="mono" style="margin-top: 45px;">System_Deliverables</h4>
+                    <ul class="mono"
+                        style="list-style: none; margin-top: 20px; color: var(--text-dim); font-size: 0.85rem; line-height: 2;">
+                        <li>• Automated PDF Reporting</li>
+                        <li>• Audit Trail Logger</li>
+                        <li>• Inventory Telemetry</li>
+                        <li>• Admin Cloud Dashboard</li>
+                    </ul>
+
+                    <div class="magnetic-wrap" style="padding: 0; width: 100%; margin-top: 45px; display: flex; justify-content: center;">
+                        <a href="https://github.com/EL-3raby/StationerySystem" target="_blank" class="magnetic-btn" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--fs-accent); color: #000; font-size: 1.8rem; transition: 0.3s;" title="View Source Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="mono">&copy; 2026 AHMED ELARABY • ENTERPRISE CORE OPERATIONAL</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

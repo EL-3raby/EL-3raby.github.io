@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniPay Wallet API | Project Detail</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/hub.css">
+    <style>
+        .project-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1470');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .stat-card {
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--fs-accent);
+        }
+    </style>
+</head>
+<body class="fullstack">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <a href="../../index.html" class="logo">A.ELARABY</a>
+        <div class="magnetic-wrap" style="padding: 0;">
+            <a href="../../fullstack.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Hub</a>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="section">
+            <p class="mono accent-text">Financial Systems • 2024</p>
+            <h1 class="hub-title">OmniPay Wallet API</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 80px;">
+            <div>
+                <h2 class="mono">Project_Overview</h2>
+                <p style="margin: 20px 0; color: var(--text-dim); line-height: 1.8; font-size: 1.1rem;">
+                    OmniPay is a high-security financial middleware designed to bridge legacy banking systems with modern digital wallets. It handles mission-critical transaction processing with ultra-high concurrency and strict PCI-DSS compliance.
+                </p>
+                
+                <h3 class="mono" style="margin-top: 50px;">Security_Architecture</h3>
+                <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 20px;">
+                    <div class="glass" style="padding: 30px; border-radius: 20px;">
+                        <h4 class="accent-text">Atomic Transactions</h4>
+                        <p style="color: var(--text-dim); font-size: 0.95rem;">Leveraged Go's concurrency primitives and PostgreSQL isolation levels to guarantee data integrity across distributed ledger systems.</p>
+                    </div>
+                    <div class="glass" style="padding: 30px; border-radius: 20px;">
+                        <h4 class="accent-text">Compliance Shield</h4>
+                        <p style="color: var(--text-dim); font-size: 0.95rem;">Integrated hardware security modules (HSM) and multi-factor biometric authentication layers to meet global financial standards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside>
+                <div class="glass" style="padding: 40px; border-radius: 30px; position: sticky; top: 120px;">
+                    <h4 class="mono">FinTech_Stack</h4>
+                    <div class="card-tags" style="margin-top: 20px; flex-wrap: wrap;">
+                        <span class="tag">Go (Golang)</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">gRPC</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">OAuth 2.0</span>
+                    </div>
+                    
+                    <h4 class="mono" style="margin-top: 40px;">Key Deliverables</h4>
+                    <ul class="mono" style="list-style: none; margin-top: 15px; color: var(--text-dim); font-size: 0.8rem;">
+                        <li>• Transaction Engine</li>
+                        <li>• Merchant Dashboard</li>
+                        <li>• Security Compliance Docs</li>
+                    </ul>
+
+                    <div class="magnetic-wrap" style="padding: 0; width: 100%; margin-top: 40px;">
+                        <a href="#" class="magnetic-btn btn-primary" style="width: 100%;">Security Audit Rep</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Metrics -->
+        <div class="stats-grid">
+            <div class="stat-card glass">
+                <div class="stat-value">0.0 sec</div>
+                <p class="mono">Double-Spend Records</p>
+            </div>
+            <div class="stat-card glass">
+                <div class="stat-value">10k+</div>
+                <p class="mono">TPS (Trans/Sec)</p>
+            </div>
+            <div class="stat-card glass">
+                <div class="stat-value">Zero</div>
+                <p class="mono">Security Breaches</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="mono">&copy; 2026 AHMED ELARABY • ALL SYSTEMS OPERATIONAL</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+</body>
+</html>

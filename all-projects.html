@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Registry | All Projects | Ahmed Elaraby</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/hub.css">
+    <style>
+        .archive-header {
+            padding: 120px 0 60px;
+            position: relative;
+        }
+        
+        /* Terminal Header Design */
+        .terminal-window {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            backdrop-filter: blur(20px);
+        }
+        
+        .terminal-bar {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--border-glass);
+        }
+        
+        .dot { width: 12px; height: 12px; border-radius: 50%; opacity: 0.5; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+        
+        .terminal-content {
+            padding: 40px;
+            text-align: left;
+        }
+        
+        .terminal-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--fs-accent);
+        }
+
+        /* Industrial Background Grid */
+        .grid-bg {
+            position: fixed;
+            inset: 0;
+            background-image: 
+                linear-gradient(var(--border-glass) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-glass) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .project-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+            text-transform: uppercase;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--fs-accent);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            box-shadow: 0 0 10px var(--fs-accent);
+        }
+    </style>
+</head>
+<body class="fullstack">
+
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <a href="index.html" class="logo">A.ELARABY</a>
+        <div class="magnetic-wrap" style="padding: 0;">
+            <a href="fullstack.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Hub</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="archive-header">
+        <div class="terminal-window">
+            <div class="terminal-bar">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <span class="mono" style="font-size: 0.7rem; margin-left: auto; opacity: 0.5;">web_arch_registry.exe</span>
+            </div>
+            <div class="terminal-content">
+                <div class="terminal-text">> initializing_registry...</div>
+                <h1 class="hub-title" style="font-size: 2.8rem; text-align: left; margin: 15px 0;">All_Systems_Architecture</h1>
+                <p class="mono accent-text">> Full Stack Portfolio Archive // Ahmed Elaraby</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section">
+        <!-- Unified Grid -->
+        <div class="projects-grid">
+            
+            <!-- Project: NYX -->
+            <div class="project-item project-card-wrap">
+                <div class="card glass">
+                    <div class="project-meta">
+                        <span><span class="status-dot"></span> NEURAL_SYNC</span>
+                        <span>v2.1.0</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" alt="NYX Ecosystem" class="card-img" style="background: #000;">
+                    <div class="card-content">
+                        <div class="card-tags"><span class="tag">React 19</span> <span class="tag">Firebase</span></div>
+                        <h3 class="card-title">NYX Luxury Ecosystem</h3>
+                        <div class="magnetic-wrap"><a href="projects/web-projects/nyx-ecosystem.html" class="magnetic-btn btn-primary">Archive_File</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: EL-KOLY ERP -->
+            <div class="project-item project-card-wrap">
+                <div class="card glass">
+                    <div class="project-meta">
+                        <span><span class="status-dot"></span> LIVE_DEPLOY</span>
+                        <span>v5.0.2</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&q=80&w=600" alt="ERP" class="card-img">
+                    <div class="card-content">
+                        <div class="card-tags"><span class="tag">Python</span> <span class="tag">PySide6</span> <span class="tag">Cloud Sync</span></div>
+                        <h3 class="card-title">Stationery System</h3>
+                        <div class="magnetic-wrap"><a href="projects/web-projects/stationery-erp.html" class="magnetic-btn btn-primary">Archive_File</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item project-card-wrap">
+                <div class="card glass">
+                    <div class="project-meta">
+                        <span><span class="status-dot"></span> SECURE</span>
+                        <span>v2.0.4</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=600" alt="E-commerce" class="card-img">
+                    <div class="card-content">
+                        <div class="card-tags"><span class="tag">TypeScript</span> <span class="tag">Stripe</span></div>
+                        <h3 class="card-title">NexStore E-commerce</h3>
+                        <div class="magnetic-wrap"><a href="projects/web-projects/ecommerce.html" class="magnetic-btn btn-primary">Archive_File</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item project-card-wrap">
+                <div class="card glass">
+                    <div class="project-meta">
+                        <span><span class="status-dot"></span> SYNCING</span>
+                        <span>v0.8.2</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=600" alt="Chat" class="card-img">
+                    <div class="card-content">
+                        <div class="card-tags"><span class="tag">Socket.io</span> <span class="tag">Redis</span></div>
+                        <h3 class="card-title">Real-time Chat Engine</h3>
+                        <div class="magnetic-wrap"><a href="projects/web-projects/chat-app.html" class="magnetic-btn btn-primary">Archive_File</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-item project-card-wrap">
+                <div class="card glass">
+                    <div class="project-meta">
+                        <span><span class="status-dot"></span> ENCRYPTED</span>
+                        <span>v1.0.1</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600" alt="FinTech" class="card-img">
+                    <div class="card-content">
+                        <div class="card-tags"><span class="tag">Go (Golang)</span> <span class="tag">gRPC</span></div>
+                        <h3 class="card-title">OmniPay Wallet API</h3>
+                        <div class="magnetic-wrap"><a href="projects/web-projects/fintech-api.html" class="magnetic-btn btn-primary">Archive_File</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

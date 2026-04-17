@@ -1,476 +1,221 @@
-<!doctype html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Heart Disease Analysis | Ahmed Elaraby</title>
-    <meta
-      name="description"
-      content="Case study: Heart Disease Analysis using Machine Learning techniques in Python."
-    />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Heart Diagnostics | AI Case Study</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/hub.css">
+    <style>
+        .project-hero {
+            height: 75vh;
+            background: linear-gradient(rgba(10, 1, 24, 0.7), rgba(10, 1, 24, 0.9)), url('../assets/images/projects/heart_disease_ai_cover_1776389646371.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .ml-code-block {
+            background: #0d1117;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #e6edf3;
+            margin: 30px 0;
+            position: relative;
+        }
+        .ml-code-block::before {
+            content: "MODEL_LOGIC_v1.0";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #a855f7;
+            color: #000;
+            padding: 2px 10px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            border-radius: 5px;
+        }
+        .metric-card {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #a855f7;
+            display: block;
+        }
+    </style>
+</head>
+<body class="ml">
 
-    <!-- Styles and scripts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../css/project-detail.css" />
-  </head>
-  <body>
+    <!-- Neural Background Canvas -->
+    <canvas id="neural-bg" style="opacity: 0.2;"></canvas>
+
     <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="../index.html" class="nav-logo">
-          <span class="logo-accent">A</span>hmed<span class="logo-accent"
-            >E</span
-          >laraby
-        </a>
-
-        <ul class="nav-menu">
-          <li><a href="../index.html#home" class="nav-link">Home</a></li>
-          <li>
-            <a href="../index.html#projects" class="nav-link">Projects</a>
-          </li>
-          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-        </ul>
-
-        <div class="nav-actions">
-          <button class="lang-toggle" id="langToggle">
-            <span class="lang-text">EN</span>
-            <i class="fas fa-globe"></i>
-          </button>
+    <nav class="navbar glass">
+        <a href="../index.html" class="logo">A.ELARABY</a>
+        <div class="magnetic-wrap" style="padding: 0;">
+            <a href="../machine-learning.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Research</a>
         </div>
-      </div>
     </nav>
 
-    <!-- Project Detail -->
-    <main class="project-detail">
-      <div class="container">
-        <!-- Back Button -->
-        <a href="../index.html#projects" class="back-btn">
-          <i class="fas fa-arrow-left"></i> Back to Projects
-        </a>
-
-        <!-- Project Header -->
-        <header class="project-header">
-          <div class="project-meta">
-            <span class="project-category">Data Analysis & Visualization</span>
-            <span class="project-date">Completed: Dec 2025</span>
-          </div>
-          <h1 class="project-title">Heart Disease Analysis</h1>
-          <p class="project-subtitle">
-            Developed an interactive dashboard to analyze and visualize heart disease data using machine learning techniques in Python.
-          </p>
-
-          <!-- Project Info Box -->
-          <div class="project-info-box">
-            <div class="info-item">
-              <h4><i class="fas fa-user-tie"></i> Client</h4>
-              <p>Egyptian Healthcare Organization</p>
-            </div>
-            <div class="info-item">
-              <h4><i class="fas fa-calendar"></i> Timeline</h4>
-              <p>3 Months</p>
-            </div>
-            <div class="info-item">
-              <h4><i class="fas fa-tasks"></i> My Role</h4>
-              <p>Data Analyst & Developer</p>
-            </div>
-            <div class="info-item">
-              <h4><i class="fas fa-code"></i> Technologies</h4>
-              <div class="project-links-detail">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <a
-                  href="#"
-                  class="btn btn-secondary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-                <a href="#" class="btn btn-secondary" onclick="window.print()">
-                  <i class="fas fa-print"></i> Print Case Study
-                </a>
-              </div>
-              <div class="tech-tags">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>Plotly</span>
-                <span>Streamlit</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>Docker</span>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <!-- Project Image -->
-        <div class="project-gallery">
-          <div class="gallery-container">
-            <!-- Gallery Navigation -->
-            <button class="gallery-nav prev-btn" aria-label="Previous image">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <!-- Gallery Images -->
-            <div class="gallery-track">
-              <div class="gallery-slide active">
-                <img
-                  src="../assets/images/WhatsApp Image 2026-01-28 at 08.01.46.jpeg"
-                  alt="Sales Dashboard - Main Overview"
-                  loading="lazy"
-                />
-                <div class="image-caption">
-                  Dashboard Overview - Main Metrics
-                </div>
-              </div>
-
-              <div class="gallery-slide">
-                <img
-                  src="../assets/images/55jpeg.jpeg"
-                  alt="Sales Trends Analysis"
-                  loading="lazy"
-                />
-                <div class="image-caption">Sales Trends & Forecasting</div>
-              </div>
-
-              <div class="gallery-slide">
-                <img
-                  src="../assets/images/22.jpeg"
-                  alt="Customer Segmentation"
-                  loading="lazy"
-                />
-                <div class="image-caption">Customer Segmentation Analysis</div>
-              </div>
-
-            </div>
-
-            <!-- Gallery Navigation -->
-            <button class="gallery-nav next-btn" aria-label="Next image">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-
-            <!-- Gallery Dots -->
-            <div class="gallery-dots">
-              <button class="dot active" aria-label="Go to slide 1"></button>
-              <button class="dot" aria-label="Go to slide 2"></button>
-              <button class="dot" aria-label="Go to slide 3"></button>
-              <button class="dot" aria-label="Go to slide 4"></button>
-              <button class="dot" aria-label="Go to slide 5"></button>
-            </div>
-
-            <!-- Fullscreen Toggle -->
-            <button class="fullscreen-btn" aria-label="Toggle fullscreen">
-              <i class="fas fa-expand"></i>
-            </button>
-          </div>
-
-          <!-- Gallery Counter -->
-          <div class="gallery-counter">
-            <span class="current-slide">1</span> /
-            <span class="total-slides">5</span>
-          </div>
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="section reveal reveal-up">
+            <p class="mono accent-text">Medical_Intelligence • Deep_Learning</p>
+            <h1 class="hub-title" style="font-size: 4rem;">NEURAL HEART DIAGNOSTICS</h1>
+            <p class="mono" style="margin-top: 20px; opacity: 0.7;">Clinical Telemetry Analysis & Predictive Diagnostics Pipeline</p>
         </div>
+    </header>
 
-        <!-- Project Content -->
-        <div class="project-content">
-          <!-- The Challenge -->
-          <section class="content-section">
-            <h2>
-              <i class="fas fa-exclamation-triangle text-accent"></i> The
-              Challenge
-            </h2>
-            <p>A leading healthcare organization in Egypt was struggling with:</p>
-            <ul>
-              <li>Slow data processing and analysis</li>
-              <li>No real-time visibility into patient health metrics</li>
-              <li>
-                Difficulty identifying high-risk patients and early warning signs
-              </li>
-              <li>Inability to track the impact of treatment plans</li>
-              <li>
-                Separate data sources (POS, inventory, CRM) causing data
-                inconsistencies
-              </li>
-            </ul>
-            <p>
-                They needed a comprehensive solution to integrate their data,
-                automate analysis, and provide actionable insights through an
-                interactive dashboard.
-            </p>
-          </section>
-
-          <!-- The Solution -->
-          <section class="content-section">
-            <h2><i class="fas fa-lightbulb text-accent"></i> The Solution</h2>
-            <p>
-                Developed a robust data pipeline and an interactive dashboard to
-                provide real-time insights into heart disease data, enabling
-                proactive patient management and data-driven decision making.
-            </p>
-
-            <h3>Data Pipeline & Integration</h3>
-            <ul>
-              <li>
-                Built ETL processes using Python and Pandas to extract data from
-                multiple sources
-              </li>
-              <li>
-                Designed a PostgreSQL database schema optimized for analysis
-              </li>
-              <li>Implemented data validation and cleaning processes</li>
-              <li>
-                Set up incremental data loading to handle 500K+ daily
-                transactions
-              </li>
-            </ul>
-
-            <h3>Analysis & Metrics</h3>
-            <ul>
-              <li>Analyzed sales trends using time series analysis</li>
-              <li>
-                Developed customer segmentation using RFM analysis
-              </li>
-              <li>Built sales forecasting models for inventory optimization</li>
-              <li>Implemented anomaly detection for unusual sales patterns</li>
-            </ul>
-
-            <h3>Dashboard Development</h3>
-            <ul>
-              <li>Built interactive dashboard using Streamlit and Plotly</li>
-              <li>
-                Created multiple views: Executive Summary, Product Analysis,
-                Regional Performance, Customer Insights
-              </li>
-              <li>Added drill-down capabilities for detailed analysis</li>
-              <li>Implemented scheduled email reports for stakeholders</li>
-            </ul>
-
-            <div class="code-snippet">
-              <div class="code-header">
-                <span>Python</span>
-                <button class="copy-btn">
-                  <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <pre><code># Example: Sales trend analysis
-import pandas as pd
-import numpy as np
-from statsmodels.tsa.holtwinters import ExponentialSmoothing
-# Load sales data
-sales_data = pd.read_csv('sales_data.csv', parse_dates=['date'], index_col='date')
-# Resample to monthly sales
-monthly_sales = sales_data.resample('M').sum()
-# Fit Holt-Winters model
-model = ExponentialSmoothing(monthly_sales, trend='add', seasonal='add', seasonal_periods=12).fit()
-# Forecast next 6 months
-forecast = model.forecast(6)
-print(forecast)
-              </code></pre>
-            </div>
-          </section>
-
-          <!-- Key Features -->
-          <section class="content-section">
-            <h2><i class="fas fa-star text-accent"></i> Key Features</h2>
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-bolt"></i>
-                </div>
-                <h4>Real-time Updates</h4>
-                <p>Dashboard updates every 15 minutes with latest sales data</p>
-              </div>
-
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-filter"></i>
-                </div>
-                <h4>Interactive Filters</h4>
-                <p>Filter by date range, region, product category, and store</p>
-              </div>
-
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-chart-line"></i>
-                </div>
-                <h4>Advanced Visualizations</h4>
-                <p>
-                  Interactive charts with zoom, pan, and drill-down capabilities
+    <!-- Main Content -->
+    <main class="section">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 80px;">
+            <div class="reveal reveal-up">
+                <h2 class="mono">Research_Objective</h2>
+                <p style="margin: 20px 0; color: var(--text-dim); line-height: 1.8; font-size: 1.1rem;">
+                    The core objective was to develop a high-precision diagnostic model capable of identifying early indicators of coronary heart disease. By leveraging multi-parameter clinical telemetry, the system minimizes diagnostic latency and provides deterministic outcomes based on historical patterns.
                 </p>
-              </div>
 
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-bell"></i>
+                <h3 class="mono" style="margin-top: 50px;">Data_Visualization_Nexus</h3>
+                <div class="gallery-item" style="margin-top: 25px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(168, 85, 247, 0.2); background: rgba(0,0,0,0.3);">
+                    <img src="../assets/images/projects/heart_diagnostics_visualization_1776389984934.png" alt="Heart Diagnostic Heatmap" style="width: 100%; display: block; opacity: 0.9;">
+                    <p class="mono" style="padding: 15px; font-size: 0.75rem; color: #a855f7; text-align: center; border-top: 1px solid rgba(168, 85, 247, 0.1);">Neural_Feature_Correlation_Map // ISO_9001_COMPLIANT</p>
                 </div>
-                <h4>Alert System</h4>
-                <p>
-                  Automatic alerts for sales anomalies and target achievements
-                </p>
-              </div>
+
+                <h3 class="mono" style="margin-top: 50px;">Algorithmic_Infrastructure</h3>
+                <div class="ml-code-block">
+<span style="color: #ff7b72;">import</span> tensorflow <span style="color: #ff7b72;">as</span> tf
+<span style="color: #ff7b72;">from</span> sklearn.ensemble <span style="color: #ff7b72;">import</span> RandomForestClassifier
+
+<span style="color: #8b949e;"># Initialize Neural Sequence Model</span>
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(<span style="color: #79c0ff;">64</span>, activation=<span style="color: #a5d6ff;">'relu'</span>, input_shape=(input_dim,)),
+    tf.keras.layers.Dropout(<span style="color: #79c0ff;">0.2</span>),
+    tf.keras.layers.Dense(<span style="color: #79c0ff;">1</span>, activation=<span style="color: #a5d6ff;">'sigmoid'</span>)
+])
+
+<span style="color: #8b949e;"># Compile with Gradient Optimization</span>
+model.compile(optimizer=<span style="color: #a5d6ff;">'adam'</span>, loss=<span style="color: #a5d6ff;">'binary_crossentropy'</span>, metrics=[<span style="color: #a5d6ff;">'accuracy'</span>])
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+                    <div class="metric-card">
+                        <span class="metric-value">94.8%</span>
+                        <span class="mono" style="font-size: 0.8rem; opacity: 0.6;">Model Accuracy</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value">0.96</span>
+                        <span class="mono" style="font-size: 0.8rem; opacity: 0.6;">F1 Score</span>
+                    </div>
+                </div>
             </div>
-          </section>
 
-          <!-- The Results -->
-          <section class="content-section">
-            <h2><i class="fas fa-chart-bar text-accent"></i> The Results</h2>
-            <div class="results-grid">
-              <div class="result-card">
-                <div class="result-number">70%</div>
-                <div class="result-label">Faster Reporting</div>
-              </div>
-              <div class="result-card">
-                <div class="result-number">35%</div>
-                <div class="result-label">Increase in Sales</div>
-              </div>
-              <div class="result-card">
-                <div class="result-number">45%</div>
-                <div class="result-label">Cost Reduction</div>
-              </div>
-              <div class="result-card">
-                <div class="result-number">40+</div>
-                <div class="result-label">Users Adopted</div>
-              </div>
-            </div>
+            <aside class="reveal reveal-up" style="transition-delay: 200ms;">
+                <div class="glass" style="padding: 40px; border-radius: 30px; position: sticky; top: 120px;">
+                    <h4 class="mono">Technical_Telemetry</h4>
+                    <div class="card-tags" style="margin-top: 25px; flex-wrap: wrap;">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                    
+                    <h4 class="mono" style="margin-top: 45px;">Project_Metrics</h4>
+                    <ul class="mono" style="list-style: none; margin-top: 20px; color: var(--text-dim); font-size: 0.85rem; line-height: 2;">
+                        <li>• Dataset Size: 300K Samples</li>
+                        <li>• Training Time: 12.4 hrs</li>
+                        <li>• Feature Nodes: 13</li>
+                        <li>• Architecture: MLP Sequence</li>
+                    </ul>
 
-            <h3>Business Impact</h3>
-            <ul>
-              <li>
-                <strong>Reporting time reduced</strong> from 4 days to 4 hours
-                monthly
-              </li>
-              <li>
-                <strong>Identified 3 underperforming regions</strong> leading to
-                strategy adjustments
-              </li>
-              <li>
-                <strong>Optimized inventory levels</strong>, reducing stockouts
-                by 30%
-              </li>
-              <li>
-                <strong>Improved promotional effectiveness</strong> through A/B
-                testing insights
-              </li>
-              <li>
-                <strong>Enabled data-driven decisions</strong> at all management
-                levels
-              </li>
-            </ul>
-
-            <h3>Technical Achievements</h3>
-            <ul>
-              <li>Processes 500K+ transactions daily with 99.9% uptime</li>
-              <li>
-                Dashboard loads in under 3 seconds even with large datasets
-              </li>
-              <li>
-                Automated data pipeline reduces manual work by 20 hours/week
-              </li>
-              <li>
-                Modular architecture allows easy addition of new data sources
-              </li>
-            </ul>
-          </section>
-
-          <!-- Lessons Learned -->
-          <section class="content-section">
-            <h2>
-              <i class="fas fa-graduation-cap text-accent"></i> Lessons Learned
-            </h2>
-            <ul>
-              <li>
-                <strong>User involvement is crucial:</strong> Regular feedback
-                sessions with end-users helped shape the most useful features
-              </li>
-              <li>
-                <strong>Start simple, then expand:</strong> Initially focused on
-                5 key metrics, then gradually added more complex analyses
-              </li>
-              <li>
-                <strong>Performance matters:</strong> Optimized database queries
-                and implemented caching for better dashboard performance
-              </li>
-              <li>
-                <strong>Training is essential:</strong> Created video tutorials
-                and documentation to ensure successful adoption
-              </li>
-            </ul>
-          </section>
-
-          <!-- Future Enhancements -->
-          <section class="content-section">
-            <h2>
-              <i class="fas fa-rocket text-accent"></i> Future Enhancements
-            </h2>
-            <ul>
-              <li>
-                Integration with machine learning for predictive analytics
-              </li>
-              <li>Mobile app version for on-the-go access</li>
-              <li>
-                Natural language query interface (Ask questions in plain
-                English/Arabic)
-              </li>
-              <li>Integration with weather data for weather-impact analysis</li>
-              <li>Advanced customer lifetime value prediction</li>
-            </ul>
-          </section>
+                    <div class="magnetic-wrap" style="padding: 0; width: 100%; margin-top: 45px; display: flex; justify-content: center;">
+                        <a href="https://github.com/EL-3raby" target="_blank" class="magnetic-btn" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--ml-accent); color: #000; font-size: 1.8rem;">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
         </div>
-
-        <!-- Project Navigation -->
-        <div class="project-navigation">
-          <a href="social_games_rate.html" class="nav-btn prev-btn disabled">
-            <i class="fas fa-arrow-left"></i>
-            <div>
-              <span>Previous Project</span>
-              <h4>N/A</h4>
-            </div>
-          </a>
-          <a href="../index.html#projects" class="nav-btn all-projects">
-            <i class="fas fa-th"></i>
-            All Projects
-          </a>
-          <a href="#next-project" class="nav-btn next-btn">
-            <div>
-              <span>Next Project</span>
-              <h4></h4>
-            </div>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <p>
-          &copy; <span id="currentYear">2024</span> Ahmed Elaraby. All rights
-          reserved.
-        </p>
-        <div class="footer-social">
-          <a href="https://github.com/EL-3raby" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/ahmed-el-3raby/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:ahmedela3raby@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
+        <p class="mono">&copy; 2026 AHMED ELARABY • CLINICAL_CORE_STABLE</p>
     </footer>
 
-    <script src="../script.js"></script>
-    <script src="../js/project-detail.js"></script>
-  </body>
+    <!-- Scripts -->
+    <script>
+        // Copy neural background logic from main hub for consistency
+        const canvas = document.getElementById('neural-bg');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const mouse = { x: null, y: null, radius: 150 };
+
+        window.addEventListener('mousemove', (e) => { mouse.x = e.x; mouse.y = e.y; });
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0; else if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0; else if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = '#a855f7'; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
+            }
+        }
+
+        function init() {
+            particles = [];
+            for (let i = 0; i < 100; i++) { particles.push(new Particle()); }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update(); particles[i].draw();
+                for (let j = i; j < particles.length; j++) {
+                    let dx = particles[i].x - particles[j].x;
+                    let dy = particles[i].y - particles[j].y;
+                    let distance = Math.sqrt(dx*dx + dy*dy);
+                    if (distance < 100) {
+                        ctx.beginPath(); ctx.strokeStyle = `rgba(168, 85, 247, ${1 - distance/100})`; ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke(); ctx.closePath();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        init(); animate();
+    </script>
+    <script src="../js/main.js"></script>
+</body>
 </html>

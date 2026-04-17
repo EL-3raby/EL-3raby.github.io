@@ -1,0 +1,364 @@
+/* 
+    DESIGN SYSTEM & GLOBAL STYLES
+    Dual-Track Portfolio Architecture
+    Ahmed Elaraby - Expert Full Stack & ML Engineer
+*/
+
+:root {
+    /* Colors - Core */
+    --bg-dark: #050505;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --border-glass: rgba(255, 255, 255, 0.1);
+    
+    /* Track 1: Full Stack (Cyan/Blue) */
+    --fs-accent: #00f2ff;
+    --fs-accent-rgb: 0, 242, 255;
+    --fs-gradient: linear-gradient(135deg, #00f2ff 0%, #0072ff 100%);
+    
+    /* Track 2: Machine Learning (Pink/Purple) */
+    --ml-accent: #ff00ea;
+    --ml-accent-rgb: 255, 0, 234;
+    --ml-gradient: linear-gradient(135deg, #ff00ea 0%, #ae00ff 100%);
+    
+    /* Neutral */
+    --text-main: #ffffff;
+    --text-dim: #b0b0b0;
+    --white: #ffffff;
+    
+    /* Animations */
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --transition-smooth: 0.6s var(--ease-out-expo);
+    
+    /* Layout */
+    --nav-height: 80px;
+    --container-max: 1200px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 2px solid var(--bg-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.3s var(--ease-out-expo), width 0.3s, height 0.3s, background 0.3s;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor.hovering {
+    transform: translate(-50%, -50%) scale(3);
+}
+
+.custom-cursor.code::after {
+    content: '</>';
+    font-size: 5px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.custom-cursor.data::after {
+    content: '...';
+    font-size: 10px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: var(--bg-card);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--border-glass);
+}
+
+/* Magnetic Button Base */
+.magnetic-wrap {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}
+
+.magnetic-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--white);
+}
+
+/* Track Switcher */
+.track-switcher {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid var(--border-glass);
+}
+
+.switcher-btn {
+    padding: 6px 16px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-dim);
+    transition: all 0.3s;
+}
+
+.switcher-btn.active.fs {
+    background: var(--fs-accent);
+    color: #000;
+}
+
+.switcher-btn.active.ml {
+    background: var(--ml-accent);
+    color: #000;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 1s var(--ease-out-expo);
+}
+
+.preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader-name {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    filter: drop-shadow(0 0 10px #fff);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.5;
+        filter: drop-shadow(0 0 5px #fff);
+    }
+    to {
+        opacity: 1;
+        filter: drop-shadow(0 0 30px #fff);
+    }
+}
+
+/* Footer & Global Sections */
+.section {
+    padding: 100px 5%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.footer {
+    padding: 50px 5%;
+    text-align: center;
+    border-top: 1px solid var(--border-glass);
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background: var(--white);
+    transition: var(--transition-smooth);
+}
+
+/* Modal System */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s var(--ease-out-expo);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 800px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 30px;
+    padding: 50px;
+    position: relative;
+    transform: translateY(30px);
+    transition: transform 0.6s var(--ease-out-expo);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-dim);
+    transition: color 0.3s;
+}
+
+.close-modal:hover { color: var(--white); }
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        background: var(--bg-dark);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.6s var(--ease-out-expo);
+        border-left: 1px solid var(--border-glass);
+    }
+    .nav-links.active {
+        right: 0;
+    }
+    .track-switcher {
+        display: none;
+    }
+}
+
+/* Utility: Viewport Height Fix */
+.vh-100 {
+    height: 100vh;
+    height: 100dvh;
+}

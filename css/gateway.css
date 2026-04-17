@@ -1,0 +1,293 @@
+/* 
+    GATEWAY STYLES (Split Screen)
+    Dual-Track Portfolio
+*/
+
+.gateway-container {
+    display: flex;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+.side-canvas {
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+@media (max-width: 1024px) {
+    .side-canvas {
+        width: 100%;
+        height: 50%;
+    }
+    #ml-canvas { top: 50%; right: 0; }
+}
+
+#fs-canvas { left: 0; }
+#ml-canvas { right: 0; }
+
+.side:hover ~ .side-canvas {
+    opacity: 0.8;
+}
+
+.side {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: flex 0.8s var(--ease-out-expo), filter 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Side Backgrounds / Overlays */
+.side::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Full Stack Side */
+.side-fullstack {
+    border-right: 1px solid var(--border-glass);
+}
+.side-fullstack::before {
+    background: radial-gradient(circle at 30% 50%, rgba(var(--fs-accent-rgb), 0.2), transparent 70%),
+                linear-gradient(45deg, #050505 0%, #001a1d 100%);
+}
+
+/* Machine Learning Side */
+.side-ml::before {
+    background: radial-gradient(circle at 70% 50%, rgba(var(--ml-accent-rgb), 0.2), transparent 70%),
+                linear-gradient(-45deg, #050505 0%, #1a001d 100%);
+}
+
+/* Hover Interaction: Desktop */
+@media (min-width: 1025px) {
+    .gateway-container:hover .side {
+        flex: 0.4;
+        filter: grayscale(0.8) blur(2px);
+    }
+
+    .side:hover {
+        flex: 0.6 !important;
+        filter: grayscale(0) blur(0) !important;
+    }
+
+    .side:hover::before {
+        opacity: 0.6;
+    }
+}
+
+/* Central UI & Divider */
+.glow-divider {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 80vh;
+    background: white;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.5s var(--ease-out-expo);
+}
+
+.central-ui {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    pointer-events: none;
+}
+
+/* Floating Socials */
+.floating-socials {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 25px;
+    border-radius: 40px;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-glass);
+    transition: var(--transition-smooth);
+}
+
+.floating-socials a {
+    color: var(--text-dim);
+    font-size: 1.3rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-socials a:hover {
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Stats Overlay */
+.side-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s 0.2s var(--ease-out-expo);
+}
+
+.side:hover .side-stats {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    border-left: 2px solid;
+    padding-left: 10px;
+}
+
+.fs-stats .stat-item { border-color: var(--fs-accent); }
+.ml-stats .stat-item { border-color: var(--ml-accent); }
+
+/* Floating Socials */
+.floating-socials {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+}
+
+.floating-socials a {
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.floating-socials a:hover {
+    color: var(--white);
+}
+
+/* Side Content adjustments */
+.side-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    pointer-events: none;
+    transform: translateY(0);
+    transition: transform 0.6s var(--ease-out-expo);
+}
+
+.side:hover .side-content {
+    transform: translateY(-20px);
+}
+
+.side-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    line-height: 0.9;
+}
+
+.side-fullstack .side-title {
+    text-shadow: 0 0 20px rgba(var(--fs-accent-rgb), 0.5);
+}
+
+.side-ml .side-title {
+    text-shadow: 0 0 20px rgba(var(--ml-accent-rgb), 0.5);
+}
+
+.side-desc {
+    font-weight: 500;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.side-cta {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s var(--ease-out-expo);
+}
+
+.side:hover .side-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile: Stacking Vertically */
+@media (max-width: 1024px) {
+    .gateway-container {
+        flex-direction: column;
+    }
+
+    .side {
+        flex: 1;
+        width: 100%;
+        border-right: none;
+    }
+
+    .side-fullstack {
+        border-bottom: 1px solid var(--border-glass);
+    }
+
+    .side-title {
+        font-size: 2.5rem;
+    }
+
+    .side-cta {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

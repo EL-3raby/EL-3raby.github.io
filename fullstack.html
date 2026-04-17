@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Hub | Ahmed Elaraby</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/hub.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body class="fullstack">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-name">Engineering</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <a href="index.html" class="logo">A.ELARABY</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="assets/resume.pdf" class="accent-text" download>Resume <i class="fas fa-download"></i></a></li>
+        </ul>
+        <div class="track-switcher">
+            <a href="fullstack.html" class="switcher-btn fs active" data-track="fs">Full Stack</a>
+            <a href="machine-learning.html" class="switcher-btn ml" data-track="ml">ML & AI</a>
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hub-hero fullstack">
+        <div class="section">
+            <h1 class="hub-title"><span>Architecture</span>Full Stack Dev</h1>
+            <p class="mono accent-text">Building Scalable Web Solutions • Robust Backend • Modern Frontend</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section glass reveal reveal-up" style="margin-top: -50px; border-radius: 40px; overflow: hidden; position: relative;">
+        <!-- Background Decoration -->
+        <div class="about-grid-bg"></div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: center; position: relative; z-index: 2;">
+            <div class="profile-container" id="profileContainer">
+                <!-- Scanner Frame -->
+                <div class="scanner-frame">
+                    <div class="scanner-corner top-left"></div>
+                    <div class="scanner-corner top-right"></div>
+                    <div class="scanner-corner bottom-left"></div>
+                    <div class="scanner-corner bottom-right"></div>
+                    <div class="scanner-line"></div>
+                    
+                    <img src="assets/images/profile.png" alt="Ahmed Elaraby" class="profile-img">
+                </div>
+
+                <!-- Floating Badges -->
+                <div class="floating-badge badge-1 mono">[SYS_READY]</div>
+                <div class="floating-badge badge-2 mono">Lvl: Junior</div>
+                <div class="floating-badge badge-3 mono">Arch: FS_v2</div>
+            </div>
+
+            <div class="about-content">
+                <div class="status-indicator">
+                    <span class="status-pulse"></span>
+                    <span class="mono" style="font-size: 0.7rem; opacity: 0.6; letter-spacing: 3px;">INITIALIZING_IDENTITY...</span>
+                </div>
+                <h2 class="mono scramble-text" data-value="Full_Stack_Architect" style="font-size: 3.5rem; margin: 20px 0;">FULL_STACK_ARCHITECT</h2>
+                <p style="margin: 30px 0; color: var(--text-dim); line-height: 1.8; font-size: 1.2rem; max-width: 600px;">
+                    Engineering sophisticated digital solutions by bridging the gap between <span class="accent-text">immersive frontend</span> and <span class="accent-text">mission-critical backend</span> systems. Specialized in high-performance architectures.
+                </p>
+                <div class="magnetic-wrap" style="padding: 0;">
+                    <a href="#contact" class="magnetic-btn btn-primary">Establish Connection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section reveal reveal-up">
+        <div class="projects-header" style="text-align: center; margin-bottom: 60px;">
+            <h2 class="mono">Systems_&_Solutions</h2>
+            <p class="mono accent-text">Architectural services for digital-first enterprises.</p>
+        </div>
+        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div class="card glass service-card service-card-active reveal-stagger-item" style="padding: 40px; text-align: center;">
+                <div class="spotlight"></div>
+                <i class="fas fa-microchip" style="font-size: 2.5rem; color: var(--fs-accent); margin-bottom: 20px;"></i>
+                <h4 class="mono">Custom_WebApp</h4>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 15px;">Building state-of-the-art single page applications and complex dashboards.</p>
+            </div>
+            <div class="card glass service-card service-card-active" style="padding: 40px; text-align: center;">
+                <div class="spotlight"></div>
+                <i class="fas fa-network-wired" style="font-size: 2.5rem; color: var(--fs-accent); margin-bottom: 20px;"></i>
+                <h4 class="mono">API_Architecture</h4>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 15px;">Designing secure and scalable RESTful and gRPC communication layers.</p>
+            </div>
+            <div class="card glass service-card service-card-active" style="padding: 40px; text-align: center;">
+                <div class="spotlight"></div>
+                <i class="fas fa-database" style="font-size: 2.5rem; color: var(--fs-accent); margin-bottom: 20px;"></i>
+                <h4 class="mono">Data_Engineering</h4>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 15px;">Optimizing database schemas and high-frequency data ingestion flows.</p>
+            </div>
+            <div class="card glass service-card service-card-active" style="padding: 40px; text-align: center;">
+                <div class="spotlight"></div>
+                <i class="fas fa-shield-virus" style="font-size: 2.5rem; color: var(--fs-accent); margin-bottom: 20px;"></i>
+                <h4 class="mono">System_Audit</h4>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 15px;">Performance auditing and security hardening of existing infrastructures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Metrics -->
+    <section class="section glass reveal reveal-up" style="border-radius: 40px; margin-top: 50px; background: rgba(var(--fs-accent-rgb), 0.05);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; text-align: center;">
+            <div>
+                <h3 class="mono counter-val" data-target="15" style="font-size: 3rem; color: var(--fs-accent);">0</h3>
+                <p class="mono" style="font-size: 0.7rem; opacity: 0.6;">SYSTEMS_DEPLOYED</p>
+            </div>
+            <div>
+                <h3 class="mono counter-val" data-target="99.9" data-suffix="%" style="font-size: 3rem; color: var(--fs-accent);">0</h3>
+                <p class="mono" style="font-size: 0.7rem; opacity: 0.6;">CODE_RELIABILITY</p>
+            </div>
+            <div>
+                <h3 class="mono counter-val" data-target="100" data-suffix="ms" style="font-size: 3rem; color: var(--fs-accent);">0</h3>
+                <p class="mono" style="font-size: 0.7rem; opacity: 0.6;">AVG_API_LATENCY</p>
+            </div>
+            <div>
+                <h3 class="mono counter-val" data-target="24" data-suffix="/7" style="font-size: 3rem; color: var(--fs-accent);">0</h3>
+                <p class="mono" style="font-size: 0.7rem; opacity: 0.6;">MONITORING_READY</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section reveal reveal-up">
+        <div class="projects-header">
+            <div>
+                <h2 class="mono">Engineered_Systems</h2>
+                <p>Digital products designed for performance and reliability.</p>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project: NYX Ecosystem -->
+            <div class="card glass reveal-stagger-item">
+                <div style="height: 250px; background: url('img/projects/nyx/logo.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">React 19</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Neural_UI</span>
+                    </div>
+                    <h3 class="card-title">NYX Luxury Ecosystem</h3>
+                    <p class="card-desc">Advanced luxury commerce engine integrated with neural-inspired asset management and intelligence overview.</p>
+                    <div class="magnetic-wrap">
+                        <a href="projects/web-projects/nyx-ecosystem.html" class="magnetic-btn btn-primary">Systems Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 1: EL-KOLY Stationery ERP -->
+            <div class="card glass reveal-stagger-item">
+                <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&q=80&w=1470" alt="EL-KOLY ERP" class="card-img">
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PySide6</span>
+                        <span class="tag">Cloud Sync</span>
+                    </div>
+                    <h3 class="card-title">Stationery System</h3>
+                    <p class="card-desc">Comprehensive Enterprise solution with hybrid database sync, professional licensing, and real-time inventory management.</p>
+                    <div class="magnetic-wrap">
+                        <a href="projects/web-projects/stationery-erp.html" class="magnetic-btn btn-primary">Systems Architecture</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card glass reveal-stagger-item">
+                <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1632" alt="E-commerce" class="card-img">
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Stripe</span>
+                    </div>
+                    <h3 class="card-title">NexStore E-commerce</h3>
+                    <p class="card-desc">High-performance headless e-commerce solution with integrated payments and inventory management.</p>
+                    <div class="magnetic-wrap">
+                        <a href="projects/web-projects/ecommerce.html" class="magnetic-btn btn-primary">Process Analysis</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card glass reveal-stagger-item">
+                <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=1471" alt="Chat Application" class="card-img">
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">Socket.io</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <h3 class="card-title">Real-time Chat Engine</h3>
+                    <p class="card-desc">End-to-end encrypted messaging platform supporting groups, media sharing, and presence status.</p>
+                    <div class="magnetic-wrap">
+                        <a href="projects/web-projects/chat-app.html" class="magnetic-btn btn-primary">Infrastructure Log</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="card glass reveal-stagger-item">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1470" alt="FinTech API" class="card-img">
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">FinTech</span>
+                        <span class="tag">Go</span>
+                    </div>
+                    <h3 class="card-title">OmniPay Wallet API</h3>
+                    <p class="card-desc">High-concurrency payment gateway infrastructure supporting cross-border transactions and digital wallets.</p>
+                    <div class="magnetic-wrap">
+                        <a href="projects/web-projects/fintech-api.html" class="magnetic-btn btn-primary">Security Audit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Projects Button -->
+        <div style="display: flex; justify-content: center; margin-top: 100px;">
+            <div class="magnetic-wrap">
+                <a href="all-projects.html" class="magnetic-btn industrial-btn">
+                    <span class="btn-line"></span>
+                    <span class="btn-text mono"><i class="fas fa-folder-open"></i> ACCESS_ALL_REGISTRIES</span>
+                    <span class="btn-corner top-left"></span>
+                    <span class="btn-corner bottom-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Workflow -->
+    <section id="workflow" class="section reveal reveal-up">
+        <div class="projects-header" style="text-align: center; margin-bottom: 60px;">
+            <h2 class="mono">Development_Lifecycle</h2>
+            <p class="mono accent-text">A systematic approach to building robust software.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div class="glass" style="padding: 30px; border-radius: 20px; border-left: 4px solid var(--fs-accent);">
+                <span class="mono" style="opacity: 0.3; font-size: 0.7rem;">PHASE_01</span>
+                <h4 class="mono" style="margin: 10px 0;">Analysis</h4>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">Requirement gathering and system architecture design.</p>
+            </div>
+            <div class="glass" style="padding: 30px; border-radius: 20px; border-left: 4px solid var(--fs-accent);">
+                <span class="mono" style="opacity: 0.3; font-size: 0.7rem;">PHASE_02</span>
+                <h4 class="mono" style="margin: 10px 0;">Prototyping</h4>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">UI/UX engineering and high-fidelity wireframing.</p>
+            </div>
+            <div class="glass" style="padding: 30px; border-radius: 20px; border-left: 4px solid var(--fs-accent);">
+                <span class="mono" style="opacity: 0.3; font-size: 0.7rem;">PHASE_03</span>
+                <h4 class="mono" style="margin: 10px 0;">Production</h4>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">Full Stack development with clean, scalable code.</p>
+            </div>
+            <div class="glass" style="padding: 30px; border-radius: 20px; border-left: 4px solid var(--fs-accent);">
+                <span class="mono" style="opacity: 0.3; font-size: 0.7rem;">PHASE_04</span>
+                <h4 class="mono" style="margin: 10px 0;">Deployment</h4>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">CI/CD automation, testing, and system launch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section glass reveal reveal-up" style="border-radius: 40px; margin-top: 50px; padding: 60px;">
+        <div class="skills-header" style="text-align: center; margin-bottom: 60px;">
+            <h2 class="mono">Technical_Capabilities</h2>
+            <p class="mono accent-text" style="margin-top: 10px;">Full-Spectrum Engineering Stack</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <!-- Frontend Card -->
+            <div class="glass" style="padding: 40px; border-radius: 30px; border: 1px solid rgba(var(--fs-accent-rgb), 0.1);">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+                    <i class="fas fa-layer-group" style="font-size: 1.5rem; color: var(--fs-accent);"></i>
+                    <h4 class="mono" style="letter-spacing: 2px;">FRONTEND_CORE</h4>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <span class="skill-chip"><i class="fab fa-react"></i> React / Next.js</span>
+                    <span class="skill-chip"><i class="fas fa-code"></i> TypeScript</span>
+                    <span class="skill-chip"><i class="fab fa-css3-alt"></i> TailwindCSS</span>
+                    <span class="skill-chip"><i class="fas fa-wind"></i> Framer Motion</span>
+                    <span class="skill-chip"><i class="fab fa-js"></i> Redux / State</span>
+                </div>
+            </div>
+
+            <!-- Backend Card -->
+            <div class="glass" style="padding: 40px; border-radius: 30px; border: 1px solid rgba(var(--fs-accent-rgb), 0.1);">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+                    <i class="fas fa-server" style="font-size: 1.5rem; color: var(--fs-accent);"></i>
+                    <h4 class="mono" style="letter-spacing: 2px;">BACKEND_FORGE</h4>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <span class="skill-chip"><i class="fab fa-node-js"></i> Node.js / Express</span>
+                    <span class="skill-chip"><i class="fas fa-database"></i> PostgreSQL / Mongo</span>
+                    <span class="skill-chip"><i class="fas fa-bolt"></i> Redis / Socket.io</span>
+                    <span class="skill-chip"><i class="fas fa-project-diagram"></i> GraphQL / REST</span>
+                    <span class="skill-chip"><i class="fas fa-shield-alt"></i> OAuth / JWT</span>
+                </div>
+            </div>
+
+            <!-- DevOps Card -->
+            <div class="glass" style="padding: 40px; border-radius: 30px; border: 1px solid rgba(var(--fs-accent-rgb), 0.1);">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+                    <i class="fas fa-cubes" style="font-size: 1.5rem; color: var(--fs-accent);"></i>
+                    <h4 class="mono" style="letter-spacing: 2px;">DEVOPS_CLOUD</h4>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <span class="skill-chip"><i class="fab fa-aws"></i> AWS / Vercel</span>
+                    <span class="skill-chip"><i class="fab fa-docker"></i> Docker / K8s</span>
+                    <span class="skill-chip"><i class="fab fa-github"></i> CI / CD Pipelines</span>
+                    <span class="skill-chip"><i class="fas fa-vial"></i> Jest / Playwright</span>
+                    <span class="skill-chip"><i class="fas fa-terminal"></i> Linux / Bash</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section glass" style="border-radius: 40px; margin-top: 50px; padding: 60px;">
+        <h2 class="mono" style="margin-bottom: 40px;">Control_Center_FAQ</h2>
+        <div style="display: grid; gap: 20px;">
+            <details class="glass" style="padding: 20px; border-radius: 15px; cursor: pointer;">
+                <summary class="mono" style="list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    How long does a typical project take?
+                    <i class="fas fa-chevron-down" style="font-size: 0.8rem; color: var(--fs-accent);"></i>
+                </summary>
+                <p style="margin-top: 15px; color: var(--text-dim); font-size: 0.9rem; line-height: 1.6;">
+                    Timeline varies by complexity. A standard MVP typically takes 4-6 weeks, while large-scale enterprise systems may require 3-6 months.
+                </p>
+            </details>
+            <details class="glass" style="padding: 20px; border-radius: 15px; cursor: pointer;">
+                <summary class="mono" style="list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    Do you provide maintenance after launch?
+                    <i class="fas fa-chevron-down" style="font-size: 0.8rem; color: var(--fs-accent);"></i>
+                </summary>
+                <p style="margin-top: 15px; color: var(--text-dim); font-size: 0.9rem; line-height: 1.6;">
+                    Yes, I offer periodic maintenance packages including security updates, performance audits, and feature expansions.
+                </p>
+            </details>
+            <details class="glass" style="padding: 20px; border-radius: 15px; cursor: pointer;">
+                <summary class="mono" style="list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    Can you work with existing codebases?
+                    <i class="fas fa-chevron-down" style="font-size: 0.8rem; color: var(--fs-accent);"></i>
+                </summary>
+                <p style="margin-top: 15px; color: var(--text-dim); font-size: 0.9rem; line-height: 1.6;">
+                    Absolutely. I have extensive experience in auditing, optimizing, and scaling legacy applications to modern standards.
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="contact-section fullstack glass" style="border-radius: 40px; padding: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+            <div>
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <span class="status-dot"></span>
+                    <span class="mono" style="font-size: 0.8rem; opacity: 0.6; letter-spacing: 2px;">CONNECTION_READY</span>
+                </div>
+                <h2 class="mono" style="font-size: 3rem; margin-bottom: 30px;">Open_Socket</h2>
+                <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 40px; font-size: 1.1rem;">
+                    Ready to architect your next digital breakthrough? Whether it's a complex SaaS platform or a high-performance API, let's establish a secure connection.
+                </p>
+                
+                <div class="social-connectivity">
+                    <h4 class="mono" style="font-size: 0.7rem; margin-bottom: 20px; opacity: 0.5;">SOCIAL_CHANNELS</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="https://github.com/EL-3raby" target="_blank" class="social-link-hub"><i class="fab fa-github"></i> github.sh</a>
+                        <a href="https://linkedin.com/in/ahmed-el-3raby/" target="_blank" class="social-link-hub"><i class="fab fa-linkedin"></i> linkedin.so</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terminal-form-wrap">
+                <div class="terminal-header" style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 15px 15px 0 0; border: 1px solid var(--border-glass); border-bottom: none; display: flex; gap: 8px;">
+                    <div class="dot red" style="width: 10px; height: 10px;"></div>
+                    <div class="dot yellow" style="width: 10px; height: 10px;"></div>
+                    <div class="dot green" style="width: 10px; height: 10px;"></div>
+                </div>
+                <form class="contact-form glass" action="https://formspree.io/f/maqjvraa" method="POST" style="border-radius: 0 0 15px 15px; padding: 40px; border-top: none;">
+                    <div class="form-group">
+                        <label class="mono" style="font-size: 0.7rem; opacity: 0.5; display: block; margin-bottom: 10px;">$ USERNAME</label>
+                        <input type="text" name="name" placeholder="client_identity" class="form-input-hub" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label class="mono" style="font-size: 0.7rem; opacity: 0.5; display: block; margin-bottom: 10px;">$ EMAIL_ADDR</label>
+                        <input type="email" name="email" placeholder="secure_callback@domain.io" class="form-input-hub" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label class="mono" style="font-size: 0.7rem; opacity: 0.5; display: block; margin-bottom: 10px;">$ PROJECT_SPECS</label>
+                        <textarea name="message" rows="4" placeholder="Describe the architecture requirements..." class="form-input-hub" required></textarea>
+                    </div>
+                    <div class="magnetic-wrap" style="padding: 0; margin-top: 40px; width: 100%;">
+                        <button type="submit" class="magnetic-btn btn-primary" style="width: 100%; height: 60px; font-weight: 800; letter-spacing: 2px;">ESTABLISH_CONNECTION</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="mono">&copy; 2026 AHMED ELARABY • ALL SYSTEMS OPERATIONAL</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <h2 class="mono accent-text">Project Title</h2>
+            <p style="margin: 20px 0; color: var(--text-dim);">Detailed project information will go here.</p>
+            <div class="magnetic-wrap" style="padding: 0;">
+                <a href="#" class="magnetic-btn btn-primary">Visit Repository</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initProjectModals === 'function') initProjectModals();
+        });
+    </script>
+</body>
+</html>
