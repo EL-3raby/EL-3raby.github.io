@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/hub.css">
     <style>
         .project-hero {
-            height: 75vh;
+            height: clamp(50vh, 60vh, 75vh);
             background: linear-gradient(rgba(10, 1, 24, 0.7), rgba(10, 1, 24, 0.9)), url('../assets/images/projects/heart_disease_ai_cover_1776389646371.png');
             background-size: cover;
             background-position: center;
@@ -24,6 +24,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            padding: 0 20px;
         }
         .ml-code-block {
             background: #0d1117;
@@ -31,11 +32,12 @@
             border-radius: 15px;
             padding: 25px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.6;
             color: #e6edf3;
             margin: 30px 0;
             position: relative;
+            overflow-x: auto;
         }
         .ml-code-block::before {
             content: "MODEL_LOGIC_v1.0";
@@ -62,6 +64,27 @@
             color: #a855f7;
             display: block;
         }
+
+        /* Responsive Overrides */
+        @media (max-width: 1024px) {
+            .project-grid {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+            .hub-title {
+                font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+                letter-spacing: -2px !important;
+            }
+            aside .glass {
+                position: relative !important;
+                top: 0 !important;
+                padding: 30px 20px !important;
+            }
+            .metric-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .hide-mobile { display: none; }
+        }
     </style>
 </head>
 <body class="ml">
@@ -73,7 +96,7 @@
     <nav class="navbar glass">
         <a href="../index.html" class="logo">A.ELARABY</a>
         <div class="magnetic-wrap" style="padding: 0;">
-            <a href="../machine-learning.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Research</a>
+            <a href="../machine-learning.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> <span class="hide-mobile">Back to Research</span></a>
         </div>
     </nav>
 
@@ -81,14 +104,14 @@
     <header class="project-hero">
         <div class="section reveal reveal-up">
             <p class="mono accent-text">Medical_Intelligence • Deep_Learning</p>
-            <h1 class="hub-title" style="font-size: 4rem;">NEURAL HEART DIAGNOSTICS</h1>
+            <h1 class="hub-title">NEURAL HEART DIAGNOSTICS</h1>
             <p class="mono" style="margin-top: 20px; opacity: 0.7;">Clinical Telemetry Analysis & Predictive Diagnostics Pipeline</p>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="section">
-        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 80px;">
+        <div class="project-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 80px;">
             <div class="reveal reveal-up">
                 <h2 class="mono">Research_Objective</h2>
                 <p style="margin: 20px 0; color: var(--text-dim); line-height: 1.8; font-size: 1.1rem;">
@@ -117,7 +140,7 @@ model = tf.keras.Sequential([
 model.compile(optimizer=<span style="color: #a5d6ff;">'adam'</span>, loss=<span style="color: #a5d6ff;">'binary_crossentropy'</span>, metrics=[<span style="color: #a5d6ff;">'accuracy'</span>])
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+                <div class="metric-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
                     <div class="metric-card">
                         <span class="metric-value">94.8%</span>
                         <span class="mono" style="font-size: 0.8rem; opacity: 0.6;">Model Accuracy</span>

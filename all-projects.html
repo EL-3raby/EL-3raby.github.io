@@ -86,6 +86,36 @@
             margin-right: 5px;
             box-shadow: 0 0 10px var(--fs-accent);
         }
+
+        /* Responsive Overrides */
+        @media (max-width: 1024px) {
+            .archive-header {
+                padding: 100px 15px 40px;
+            }
+            .terminal-content {
+                padding: 25px 20px;
+            }
+            .hub-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+                word-break: break-word;
+                line-height: 1.1;
+                margin: 20px 0 !important;
+            }
+            .terminal-window {
+                border-radius: 15px;
+            }
+            .hide-mobile {
+                display: none !important;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+                padding: 0 15px !important;
+            }
+            .card {
+                padding: 20px !important;
+            }
+        }
     </style>
 </head>
 <body class="fullstack">
@@ -100,7 +130,7 @@
     <nav class="navbar glass">
         <a href="index.html" class="logo">A.ELARABY</a>
         <div class="magnetic-wrap" style="padding: 0;">
-            <a href="fullstack.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Hub</a>
+            <a href="fullstack.html" class="magnetic-btn btn-secondary"><i class="fas fa-arrow-left"></i> <span class="hide-mobile">Back to Hub</span></a>
         </div>
     </nav>
 
@@ -115,7 +145,7 @@
             </div>
             <div class="terminal-content">
                 <div class="terminal-text">> initializing_registry...</div>
-                <h1 class="hub-title" style="font-size: 2.8rem; text-align: left; margin: 15px 0;">All_Systems_Architecture</h1>
+                <h1 class="hub-title">All_Systems_Architecture</h1>
                 <p class="mono accent-text">> Full Stack Portfolio Archive // Ahmed Elaraby</p>
             </div>
         </div>

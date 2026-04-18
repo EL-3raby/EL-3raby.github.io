@@ -21,8 +21,13 @@ function initFSBackground() {
     let particles = [];
     
     function resize() {
-        width = canvas.width = window.innerWidth / 2;
-        height = canvas.height = window.innerHeight;
+        if (window.innerWidth <= 1024) {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight / 2;
+        } else {
+            width = canvas.width = window.innerWidth / 2;
+            height = canvas.height = window.innerHeight;
+        }
     }
     
     window.addEventListener('resize', resize);
@@ -82,19 +87,31 @@ function initMLBackground() {
     let mouse = { x: -100, y: -100 };
     
     function resize() {
-        width = canvas.width = window.innerWidth / 2;
-        height = canvas.height = window.innerHeight;
+        if (window.innerWidth <= 1024) {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight / 2;
+        } else {
+            width = canvas.width = window.innerWidth / 2;
+            height = canvas.height = window.innerHeight;
+        }
     }
     
     window.addEventListener('resize', resize);
     resize();
     
     window.addEventListener('mousemove', (e) => {
-        if (e.clientX > window.innerWidth / 2) {
-            mouse.x = e.clientX - window.innerWidth / 2;
-            mouse.y = e.clientY;
+        if (window.innerWidth > 1024) {
+            if (e.clientX > window.innerWidth / 2) {
+                mouse.x = e.clientX - window.innerWidth / 2;
+                mouse.y = e.clientY;
+            } else {
+                mouse.x = -100;
+            }
         } else {
-            mouse.x = -100;
+            if (e.clientY > window.innerHeight / 2) {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY - window.innerHeight / 2;
+            }
         }
     });
     

@@ -748,6 +748,123 @@
 .fullstack .form-input:focus { border-color: var(--fs-accent); }
 .ml .form-input:focus { border-color: var(--ml-accent); }
 
+/* --- Full Stack Hub Layouts --- */
+.about-section-fs {
+    margin-top: -50px;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-grid-fs {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-grid-fs {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Responsive Overrides: Global & FS */
+@media (max-width: 1024px) {
+    .section {
+        padding: 60px 20px;
+    }
+
+    /* Hero Responsive */
+    .hub-title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        letter-spacing: -2px;
+    }
+
+    .hub-title span {
+        font-size: 0.4em;
+        letter-spacing: 3px;
+    }
+
+    /* About Section Responsive */
+    .about-section-fs {
+        margin-top: 20px;
+        border-radius: 30px;
+        padding: 40px 15px !important;
+    }
+
+    .about-grid-fs {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        text-align: center;
+    }
+
+    .profile-container {
+        margin: 0 auto !important;
+        max-width: 250px !important;
+        transform: scale(0.9) !important;
+    }
+
+    .badge-1 { top: 0 !important; right: 0 !important; }
+    .badge-2 { bottom: 10px !important; left: 0 !important; }
+    .badge-3 { right: 0 !important; top: 50% !important; transform: translateY(-50%) !important; }
+
+    .about-content {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    .about-content h2 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+        word-break: break-word !important;
+        margin: 15px 0 !important;
+    }
+
+    .about-content p {
+        margin: 10px auto !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Contact Section Responsive */
+    .contact-grid-fs {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 40px 20px;
+    }
+
+    .contact-grid-fs h2 {
+        font-size: 2.2rem;
+    }
+
+    .terminal-form-wrap {
+        width: 100%;
+    }
+
+    /* Metrics Grid Fix */
+    .counter-val {
+        font-size: 2.2rem !important;
+    }
+}
+
+/* Skills Chips Mobile Fix */
+@media (max-width: 480px) {
+    .skill-chip {
+        font-size: 0.75rem;
+        padding: 8px 12px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 /* Accent Specifics */
 .fullstack .accent-text { color: var(--fs-accent); }
 .fullstack .btn-primary { background: var(--fs-accent); color: #000; }
@@ -975,4 +1092,403 @@ textarea.form-input-hub {
 
 .gallery-item, .card, .gallery-item img {
     cursor: zoom-in;
+}
+
+/* --- Unified Project Pages Responsive --- */
+@media (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .project-hero {
+        height: auto !important;
+        min-height: 50vh !important;
+        padding: 100px 20px 60px !important;
+    }
+
+    .project-hero .hub-title {
+        font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+        letter-spacing: -1px !important;
+        line-height: 1.1 !important;
+    }
+
+    .metric-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    aside .glass {
+        position: relative !important;
+        top: 0 !important;
+        padding: 30px 20px !important;
+    }
+
+    .system-gallery {
+        grid-template-columns: 1fr !important;
+    }
+
+    .ml-code-block {
+        font-size: 0.75rem !important;
+        padding: 15px !important;
+        overflow-x: auto !important;
+    }
+    
+    .hide-mobile { display: none !important; }
+
+    /* Universal Frame & Layout Clipping Fix */
+    .profile-container, .scanner-frame, .profile-frame, .card, .terminal-window, .glass, .navbar {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        left: 0 !important;
+    }
+
+    .navbar {
+        padding: 12px 20px !important;
+        height: 70px !important;
+        background: rgba(10, 1, 24, 0.85) !important;
+        backdrop-filter: blur(20px) !important;
+        border-bottom: 2px solid rgba(168, 85, 247, 0.3) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .fullstack .navbar {
+        border-bottom-color: rgba(6, 182, 212, 0.3) !important;
+    }
+
+    .nav-links, .nav-links-wrap {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background: rgba(10, 1, 24, 0.98) !important;
+        backdrop-filter: blur(25px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1) !important;
+        z-index: 10000 !important;
+        gap: 40px !important;
+        left: auto !important;
+    }
+
+    .nav-links.active, .nav-links-wrap.active {
+        right: 0 !important;
+    }
+
+    .nav-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+    }
+
+    .track-switcher {
+        display: none !important;
+    }
+
+    .nav-links.active .nav-menu, .nav-links-wrap.active .nav-menu {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .nav-menu li a {
+        color: #fff !important;
+        font-size: 1.2rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 2px !important;
+    }
+
+    .logo {
+        font-size: 1.2rem !important;
+        letter-spacing: 3px !important;
+    }
+
+    .section {
+        padding: 60px 15px !important;
+        overflow-x: hidden !important;
+    }
+
+    .profile-core {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Machine Learning Hub Mobile Fixes */
+    .hub-hero.ml .profile-core {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 40px;
+        padding-top: 40px;
+    }
+
+    .hub-hero.ml .profile-frame {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+
+    .hub-hero.ml .hero-text h1 {
+        text-align: center !important;
+        font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+    }
+
+    .hub-hero.ml .hero-text p {
+        text-align: center;
+        font-size: 0.9rem !important;
+    }
+
+    .hub-hero.ml .hero-text div {
+        justify-content: center;
+    }
+
+    .telemetry-dashboard {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .telemetry-card {
+        padding: 20px 10px;
+    }
+
+    .telemetry-value {
+        font-size: 1.5rem !important;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-grid-ml {
+        grid-template-columns: 1fr !important;
+        gap: 50px;
+        padding: 40px 20px;
+    }
+
+    .contact-grid-ml h2 {
+        font-size: 2.22rem !important;
+        text-align: center;
+    }
+
+    .contact-grid-ml p {
+        text-align: center;
+    }
+
+    .technical-meta {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-grid-ml div[style*="display: flex; gap: 25px"] {
+        justify-content: center;
+    }
+
+    /* Shared Hero Typography Fixes */
+    .hub-hero .hub-title span {
+        display: block;
+        font-size: 0.9rem !important;
+        letter-spacing: 4px !important;
+        text-align: center !important;
+        width: 100%;
+        margin-bottom: 5px;
+        opacity: 0.6;
+    }
+
+    /* ML Hero Dashboard Boxes Mobile Fix */
+    .hero-text div[style*="display: flex; gap: 20px"] {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+
+    .hero-text div[style*="display: flex; gap: 20px"] .glass {
+        width: 100% !important;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    /* Full Stack Hub Specific Mobile Fixes */
+    .about-grid-fs {
+        grid-template-columns: 1fr !important;
+        gap: 50px !important;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+
+    .about-content p {
+        font-size: 1rem !important;
+        margin: 20px auto !important;
+    }
+
+    .about-content .status-indicator {
+        justify-content: center;
+    }
+
+    .about-content .magnetic-wrap {
+        margin: 0 auto;
+    }
+
+    .contact-grid-fs {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .contact-grid-fs h2 {
+        font-size: clamp(2rem, 10vw, 3rem) !important;
+        text-align: center !important;
+    }
+
+    .contact-grid-fs p {
+        text-align: center !important;
+        padding: 0 10px;
+    }
+
+    .social-connectivity div {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .social-link-hub {
+        width: 100% !important;
+        max-width: 250px;
+        justify-content: center;
+    }
+
+    .terminal-form-wrap form {
+        padding: 25px 15px !important;
+    }
+
+    /* Full Stack Specific Mobile Refinements */
+    .services-grid, .workflow-grid, .skills-grid-fs {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .service-card, .metric-card {
+        padding: 30px 20px !important;
+        width: 100% !important;
+    }
+
+    /* Full Stack Hero Mobile Fixes */
+    .hub-hero.fullstack {
+        padding-top: 120px !important;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hub-hero.fullstack .hub-title {
+        font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+        text-align: center !important;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .hub-hero.fullstack p.accent-text {
+        text-align: center !important;
+        font-size: 0.9rem !important;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .about-section-fs {
+        padding: 40px 15px !important;
+    }
+
+    /* ML Technical Ecosystem Fixes */
+    .skill-category {
+        padding: 30px 20px !important;
+    }
+
+    .category-header {
+        flex-direction: row !important; /* Keep LED and Text inline but spaced */
+        justify-content: center;
+        gap: 12px !important;
+    }
+
+    .skill-nodes {
+        justify-content: center;
+    }
+
+    /* ML Contact Section Fixes */
+    .contact-grid-ml {
+        padding: 40px 15px !important;
+    }
+
+    .ml-input-group {
+        margin-top: 15px !important; /* Add space for the floating tag */
+    }
+
+    .ml-input-tag {
+        top: -10px !important;
+        font-size: 0.6rem !important;
+        left: 10px !important;
+    }
+
+    .ml-form-input {
+        padding: 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .contact-grid-ml h2 {
+        font-size: clamp(1.8rem, 8vw, 2.22rem) !important;
+        text-align: center !important;
+        margin-bottom: 25px !important;
+    }
+
+    .technical-meta {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+
+    .technical-meta div {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100%;
+    }
+
+    /* Fix for crushed headers/descriptions */
+    .projects-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 15px !important;
+    }
+
+    .projects-header h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .projects-header p {
+        width: 100% !important;
+        max-width: 300px;
+        margin: 0 auto !important;
+    }
 }

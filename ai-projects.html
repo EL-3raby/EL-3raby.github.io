@@ -35,13 +35,13 @@
     <nav class="navbar glass">
         <a href="index.html" class="logo">A.ELARABY</a>
         
-        <div style="display: flex; align-items: center; gap: 40px;" class="nav-links-wrap">
+        <div style="display: flex; align-items: center; gap: 40px;" class="nav-links-wrap hide-mobile">
             <ul class="nav-menu" style="display: flex; list-style: none; gap: 30px; margin: 0;">
                 <li><a href="machine-learning.html#home" class="mono" style="font-size: 0.8rem; letter-spacing: 1px; color: var(--text-dim); text-decoration: none;">HOME</a></li>
                 <li><a href="machine-learning.html#projects" class="mono" style="font-size: 0.8rem; letter-spacing: 1px; color: var(--text-dim); text-decoration: none;">WORK</a></li>
                 <li><a href="machine-learning.html#skills" class="mono" style="font-size: 0.8rem; letter-spacing: 1px; color: var(--text-dim); text-decoration: none;">SKILLS</a></li>
                 <li><a href="machine-learning.html#contact" class="mono" style="font-size: 0.8rem; letter-spacing: 1px; color: var(--text-dim); text-decoration: none;">CONTACT</a></li>
-                <li><a href="assets/resume.pdf" class="mono accent-text" style="font-size: 0.8rem; letter-spacing: 1px; text-decoration: none;" download>RESUME <i class="fas fa-download"></i></a></li>
+                <li><a href="assets/resume.pdf" class="mono accent-text" style="font-size: 0.8rem; letter-spacing: 1px; text-decoration: none;" download><span class="hide-mobile">RESUME</span> <i class="fas fa-download"></i></a></li>
             </ul>
 
             <div class="track-switcher">
@@ -58,10 +58,10 @@
     </nav>
 
     <!-- Archive Header -->
-    <section class="hub-hero ml" style="min-height: 50vh; display: flex; align-items: center; justify-content: center;">
+    <section class="project-hero" style="min-height: 50vh; display: flex; align-items: center; justify-content: center;">
         <div class="section reveal reveal-up active" style="text-align: center;">
-            <h1 class="hub-title" style="font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 20px;">
-                <span>Research Arhcive</span>The Neural Dataset
+            <h1 class="hub-title">
+                <span>Research Archive</span>The Neural Dataset
             </h1>
             <p class="mono accent-text">Exploring the intersection of data, ethics, and neural architectures.</p>
         </div>
@@ -69,7 +69,7 @@
 
     <!-- All Projects Grid -->
     <section class="section" style="padding-top: 0;">
-        <div class="projects-grid">
+        <div class="projects-grid project-grid">
             <!-- Project 1 -->
             <div class="card glass reveal reveal-up active">
                 <img src="assets/images/dataset-cover.jpg" alt="Sales Analysis" class="card-img">
@@ -184,8 +184,8 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <p class="mono">&copy; 2026 AHMED ELARABY • ALL SYSTEMS OPERATIONAL</p>
+    <footer class="footer" style="padding: 40px 20px; text-align: center; width: 100%;">
+        <p class="mono" style="margin: 0;">&copy; 2026 AHMED ELARABY • ALL SYSTEMS OPERATIONAL</p>
     </footer>
 
     <!-- Scripts -->

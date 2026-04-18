@@ -158,11 +158,21 @@ function initMagneticButtons() {
 function initMobileMenu() {
     const navbar = document.querySelector('.navbar');
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.nav-links') || document.querySelector('.nav-links-wrap');
     
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active'); // Toggle hamburger animation
+        });
+
+        // Auto-close menu when a link is clicked
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
         });
     }
 
@@ -174,10 +184,9 @@ function initMobileMenu() {
     window.addEventListener('scroll', () => {
         if (!navbar) return;
         if (window.scrollY > 50) {
-            navbar.classList.add('glass');
-            navbar.style.background = 'rgba(5, 5, 5, 0.8)';
+            navbar.classList.add('navbar-scrolled');
         } else {
-            navbar.style.background = 'transparent';
+            navbar.classList.remove('navbar-scrolled');
         }
     });
 }
