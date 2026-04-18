@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1713456789012,
+    "title": "Neural Vision Prototype",
+    "description": "An advanced image recognition system using deep learning to identify objects in real-time.",
+    "category": "machine-learning",
+    "technologies": "Python, TensorFlow, OpenCV",
+    "image": "assets/project1.jpg",
+    "demo": "https://demo.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 1713456789013,
+    "title": "Modern Full Stack Architecture",
+    "description": "A high-performance web application designed for scalability and modern user experiences.",
+    "category": "fullstack",
+    "technologies": "React, Node.js, MongoDB",
+    "image": "assets/project2.jpg",
+    "demo": "https://demo.com",
+    "github": "https://github.com"
+  },
+  {
+    "title": "ai ",
+    "category": "machine-learning",
+    "technologies": "aaaa",
+    "description": "aaaaaaa",
+    "image": "",
+    "demo": "",
+    "github": "",
+    "id": 1776534239114
+  }
+]
