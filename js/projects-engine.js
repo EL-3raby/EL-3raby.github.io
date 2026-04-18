@@ -8,8 +8,12 @@ async function loadDynamicProjects(targetCategory = 'all') {
     if (!container) return;
 
     try {
-        // Fetch from the local path (works on GitHub Pages relative to root)
         const response = await fetch('./data/projects.json');
+        
+        if (!response.ok) {
+            throw new Error(`Data fetch failed: ${response.status}`);
+        }
+
         const projects = await response.json();
 
         // Filter projects based on page category
@@ -31,7 +35,7 @@ async function loadDynamicProjects(targetCategory = 'all') {
             card.className = 'card reveal';
             card.innerHTML = `
                 <div class="card-img-wrap">
-                    <img src="${project.image}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/400x250/0f0f15/ffffff?text=Project+Preview'">
+                    <img src="${project.image}" alt="${project.title}" onerror="this.src='https://placehold.jp/24/0f0f15/ffffff/400x250.png?text=Preview'">
                 </div>
                 <div class="card-content">
                     <div class="card-tags">
