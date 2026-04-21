@@ -43,7 +43,7 @@ function initLightbox() {
 
     // Click triggers (Applied to gallery items and project images)
     document.addEventListener('click', (e) => {
-        const target = e.target.closest('.gallery-item img, .card img, .gallery-item, .card');
+        const target = e.target.closest('.gallery-item img, .card img, .gallery-item, .card, .carousel-slide img');
         
         // If clicking a container, try to find the image inside
         let sourceImg = e.target.tagName === 'IMG' ? e.target : target?.querySelector('img');
